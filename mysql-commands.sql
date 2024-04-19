@@ -1,0 +1,2 @@
+CREATE USER 'user1'@'localhost' IDENTIFIED BY 'password';
+GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT ON *.* TO 'user1'@'localhost' WITH GRANT OPTION;
