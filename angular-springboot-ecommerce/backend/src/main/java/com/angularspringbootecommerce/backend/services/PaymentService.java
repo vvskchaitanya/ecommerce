@@ -14,7 +14,7 @@ import java.util.Map;
 @Service
 public class PaymentService {
 
-    @Value("${stripe.secret-key}")
+    @Value("${stripe.secret-key:asdfg}")
     private String stripeSecretKey;
 
     public PaymentIntent createPaymentIntent(BigDecimal amount) throws StripeException {
