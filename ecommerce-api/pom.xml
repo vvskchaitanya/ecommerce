@@ -24,7 +24,13 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-oauth2-authorization-server</artifactId>
+			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+    	</dependency>
+		<!-- JWT Library -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version> <!-- Use the latest version available -->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
