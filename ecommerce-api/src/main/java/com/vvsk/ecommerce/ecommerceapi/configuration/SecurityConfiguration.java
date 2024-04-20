@@ -4,25 +4,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.oauth2.jwt.Jwt;
-import org.springframework.security.oauth2.jwt.JwtDecoder;
-import org.springframework.security.oauth2.jwt.JwtDecoders;
-import org.springframework.security.oauth2.jwt.JwtException;
+import org.springframework.security.web.SecurityFilterChain;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.vvsk.ecommerce.ecommerceapi.service.JwtTokenService;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
+import jakarta.annotation.PostConstruct;
 
 @Configuration
-@EnableWebSecurity
-public class SecurityConfiguration {
+public class SecurityConfiguration{
 
     @Autowired
     JwtTokenService tokenService;
+
+    @Autowired
+    ObjectMapper objectMapper;
+
+    @PostConstruct()
+    public void configure(){
+        objectMapper.disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
+    }
 
     @Bean
     public BCryptPasswordEncoder encoder(){
@@ -33,37 +39,19 @@ public class SecurityConfiguration {
     OpenAPI api() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Ecommerce API")
+                        .title("Keystone Edu Tech - E-commerce Web API")
                         .description("Complete E-Commerce API built using Java and Spring Boot Framework")
                         .license(new License()
-                                .name("@Keystone Edu Tech")
+                                .name("@V.V.S.K Chaitanya")
                                 .url("https://www.gnu.org/licenses/agpl-3.0.html")));
 
     }
 
     @Bean
-    public JwtDecoder jwtDecoder() {
-        return new JwtDecoder() {
-            @Override
-            public Jwt decode(String token) throws JwtException {
-
-                return new Jwt(tokenService.extractUsername(token), null, null, null, null);
-            }
-        };
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.csrf(c->c.disable());
+        return http.build();
     }
 
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-            .authorizeHttpRequests(authorizeRequests ->
-                authorizeRequests
-                .requestMatchers("/authentication/login","/swagger-ui/index.html").permitAll()
-                .requestMatchers("/public/**").permitAll() // Define public endpoints
-                .anyRequest().authenticated() // All other requests require authentication
-            )
-            .oauth2ResourceServer(oauth2ResourceServer ->
-                oauth2ResourceServer
-                    .jwt(jwt -> jwt.decoder(jwtDecoder()))
-            );
-    }
-
+    
 }
