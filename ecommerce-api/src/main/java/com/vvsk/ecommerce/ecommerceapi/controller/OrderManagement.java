@@ -4,26 +4,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/users")
-public class UserManagement {
+@RequestMapping("/orders")
+public class OrderManagement {
 
     @GetMapping("/")
     public String list(){
         return "success";
     }
 
-    @GetMapping("/{username}")
+    @GetMapping("/{id}")
     public String get(){
         return "success";
     }
 
-    @PostMapping("/register")
-    public String register(){
-        return "success";
-    }
-
-    @DeleteMapping("/{username}")
-    public String delete(){
+    @PostMapping("/")
+    public String add(){
         return "success";
     }
 
