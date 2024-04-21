@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.http.get("assets/products.json").subscribe((res:any)=>{
       this.products = res;
+      this.productService.products = this.products;
     });
   }
 }

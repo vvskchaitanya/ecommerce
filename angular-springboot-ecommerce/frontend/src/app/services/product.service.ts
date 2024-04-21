@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 
 export interface Product {
   id: number;
@@ -15,6 +15,7 @@ export interface Product {
   providedIn: 'root'
 })
 export class ProductService {
+  products:Product[] = [];
   private apiUrl = 'https://8080-vvskchaitanya-ecommerce-roqfltrnlgh.ws-us110.gitpod.io//api/v1/products';
 
   constructor(private http: HttpClient) {}
@@ -24,7 +25,12 @@ export class ProductService {
   }
 
   getProductById(productId: number): Observable<Product> {
-    return this.http.get<Product>(`${this.apiUrl}/${productId}`);
+    for(var i in this.products){
+      if(this.products[i].id==productId){
+        return of(this.products[i]);
+      }
+    }
+    return throwError("no product");
   }
 
   addToCart(productId: number, quantity: number): Observable<any> {
