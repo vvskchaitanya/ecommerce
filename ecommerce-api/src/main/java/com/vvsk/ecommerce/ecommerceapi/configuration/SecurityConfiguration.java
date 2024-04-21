@@ -39,7 +39,7 @@ public class SecurityConfiguration{
     OpenAPI api() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Keystone Edu Tech - E-commerce Web API")
+                        .title("Keystone EduTech - E-commerce Web API")
                         .description("Complete E-Commerce API built using Java and Spring Boot Framework")
                         .license(new License()
                                 .name("@V.V.S.K Chaitanya")
