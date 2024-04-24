@@ -8,25 +8,25 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "USERS")
-public class UserEntity {
+@Table(name = "PRODUCTS")
+public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private int id;
 
-    @Column(name = "user_name")
+    @Column(name = "name")
     private String username;
 
-    @Column(name = "password")
+    @Column(name = "description")
     private String password;
 
-    @Column(name = "user_role")
-    private String role;
+    @Column(name = "price")
+    private String price;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "image")
+    private String image;
 
     public int getId() {
         return id;
@@ -52,22 +52,23 @@ public class UserEntity {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
+    public String getPrice() {
+        return price;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
-    public String getEmail() {
-        return email;
+    public String getImage() {
+        return image;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setImage(String image) {
+        this.image = image;
     }
 
+    
     
 
 }
