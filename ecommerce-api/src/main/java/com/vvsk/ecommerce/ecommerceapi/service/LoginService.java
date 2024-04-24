@@ -22,12 +22,12 @@ public class LoginService {
     JwtTokenService tokenService;
 
     public String authenticate(String username, String password){
-        List<UserEntity> users = this.userRepository.findByUsername(username);
+        List<UserEntity> users = this.userRepository.findByName(username);
         
         if(users.size()>0){
             UserEntity user = users.get(0);
             if(encoder.matches(password, user.getPassword())){
-                return tokenService.generateToken(user.getUsername());
+                return tokenService.generateToken(user.getName());
             };
         }
 

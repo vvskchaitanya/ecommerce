@@ -29,7 +29,7 @@ public class UserDetailsServiceImpl implements UserDetailsService{
     @PostConstruct
     void initialize(){
         UserEntity u = new UserEntity();
-        u.setUsername("ADMIN");
+        u.setName("ADMIN");
         u.setPassword(encoder.encode("ADMIN"));
         u.setRole("ADMIN");
         u.setEmail("admin@admin.com");
@@ -39,11 +39,11 @@ public class UserDetailsServiceImpl implements UserDetailsService{
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        List<UserEntity> users = this.userRepository.findByUsername(username);
+        List<UserEntity> users = this.userRepository.findByName(username);
         
         if(users.size()>0){
             UserEntity user = users.get(0);
-            return new User(user.getUsername(),user.getPassword(),List.of(new SimpleGrantedAuthority(user.getRole())));
+            return new User(user.getName(),user.getPassword(),List.of(new SimpleGrantedAuthority(user.getRole())));
         }else{
             throw new UsernameNotFoundException("User not found: "+username);
         }

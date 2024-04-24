@@ -1,0 +1,302 @@
+[
+    {
+        "name": "Tecno POVA 6 PRO 5G | 256+8 | Comet Green",
+        "price": "₹19,999.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTnMGW4Ke9qj5fCWwNn7mOGhWx40tFOGdsMNYui3e_AtGZC9bCJnKA7LHWFPqIzJwqWCLK7o9xyUWu-BZRDmvJMq34wSqSZ1CR7RiKXDOijAlvf6dlcxBwZSg&usqp=CAE"
+    },
+    {
+        "name": "OnePlus Nord CE4 (Dark Chrome, 8GB RAM, 128GB Storage)",
+        "price": "₹24,999.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRgmR22Rbq__PI2ARqjiHP7Z-NiDEadqX-8ULRvY2F0z3_wwqTnPf_AYSPmXS-mGpYD4YGtW7_lMswwcsgBdKRd1qOgXLc1uCdlAc-IueWoIEoazZiBflKe&usqp=CAE"
+    },
+    {
+        "name": "Redmi Note 13 5G (6GB RAM, 128GB, Prism Gold)",
+        "price": "₹17,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT7xHaAS5UwlLB4YIAhd7TlC9NJz3ymWbZIkcH-jPsRNcrNHtpnswBMhloELU7_P_PAH2BjRS6481IpRjIMLFFHiC-K6OF2UpSXV8peerVvRgzEZJ0UWjHN&usqp=CAE"
+    },
+    {
+        "name": "Nothing Phone (2a) 5G 128 GB (Black, 8 GB RAM)",
+        "price": "₹23,999.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSkksN-wzS3dgwkmKM-aF64VKFpsw9L0oQbHCCYfp8hloesY-dRQVJ9UvTFC87ytzf8h7t1UqNxy_8vJfk7nqiclbDEMhaty2GKvjcwor3KiYlvBJwJd3rL&usqp=CAE"
+    },
+    {
+        "name": "OnePlus Nord CE 3 Lite 5G (Chromatic Gray, 8GB RAM, 128GB Storage)",
+        "price": "₹17,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS8Ey_wFSsRcjXPyuKS3i39t_wjSllAjYy0zID2Q5YuA5DJ9nl0Hm1FI3sKhZLdc-K_1cUP3sXsyqBENec3cFnpFLIpE0M7Zs35JIk6WaU76B-4H2r6vHa_Cw&usqp=CAE"
+    },
+    {
+        "name": "ROG PHONE 6 Black",
+        "price": "₹47,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSf-dcCEg97IVRi093UG_a3lexhEQsBzTLyUyhpzb1j78iPaZJQ5aYvEJhPt653ey4kZyQPsNgzyaJZVAxuHrQGiLObXnZOUC5zYtgSb6fvX22X6XyZ7y_Q&usqp=CAE"
+    },
+    {
+        "name": "Nothing Phone 2 256 GB (Dark Grey, 12 GB RAM)",
+        "price": "₹31,999.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSE2OfKNcZSgCM3m15fRRrbi84kzjudpd6Qn0aGJTdJASrcLikTZojiE7qANV6RQKGW-aZluqwhIbRAOqkkEFfJgnAIomjOfqaI-r4vhO5nV9YIxySe6COEmg&usqp=CAE"
+    },
+    {
+        "name": "OnePlus Nord CE 2 5G (Bahamas Blue, 8GB RAM, 128GB Storage)",
+        "price": "₹14,999.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRyz0q5OKnQZ2vahZqwZPdlhFS0RhNx6PyEvOuuOmgeqMiKTQeVUpE1EG9hWncHyvKRZ36fzCwc9Mk9FGAYOTCv2x7JZu_ZG5Q4kGppioQfzU_14oCsATcPpg&usqp=CAE"
+    },
+    {
+        "name": "Redmi Note 12 5G (Sunrise Gold, 6GB RAM, 128GB Storage)",
+        "price": "₹16,499.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRO9jiMq3HunzJD1RZKPyfsOwVSQAaP1s4lPmPAcUI4wn1CkvH0QKNpWeGzkK3eu-i_wfEw2Emm0qjZThpRJy-3HEFdyV0SGE5IAGN1HaX2m2GnAUM37AyjDw&usqp=CAE"
+    },
+    {
+        "name": "Poco X6 Pro 5g (racing Grey, 256 Gb, 5000 Mah)",
+        "price": "₹26,729.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSU4uE0HZ1JIsrj777a1ZZA-LKOLgh2vpAh_saX-nrjM6RK5yCWrILWGvIdvfcvtk5YtFVdJIsw1y-BlQ7sA7bb8775h-qagg&usqp=CAE"
+    },
+    {
+        "name": "OPPO Reno11 Pro 5G, Pearl White, 12+256GB",
+        "price": "₹39,999.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR6X8XdvC4g3PAuqGstzDui672irjDLSZx9Xay7_HrV98FiQFiLi-NCyQT674gBNcy2mZvyWyJv_-rYK0r00D2Do_ucVtVAI35mftCNAEgu&usqp=CAE"
+    },
+    {
+        "name": "Moto Edge 30 5G ( Meteor Grey,8GB-128GB )",
+        "price": "₹23,490.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQKJJU2QHVDnfNvtgJ55JBet_lJJqSUPms80EQkEW1ZGVkNHf6VqBrmlAsu2hPv1WXm1d_mSIbnNG-_km0RUmV0rDaCpd52rPnfb4MhLwtRRBqJ0f07v_xf&usqp=CAE"
+    },
+    {
+        "name": "Iqoo Z6 Lite 5G (Stellar Green, 6Gb Ram, 128Gb Storage)",
+        "price": "₹13,499.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQDiuPt4zpLDE2oyTIWstNvQg5f27SS-YODNP03Iw8NazDMghHiWnYLM6hSgMuTlkoHUioNZMQyUDkC7v3vnFqt5C36KfOI0w2_aC8irMf1fM_TuN1M1A2M&usqp=CAE"
+    },
+    {
+        "name": "realme 12x 5G (6GB RAM, 128GB, Woodland Green)",
+        "price": "₹13,499.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTpYWDqBDO8zna-BU4n4Bmp49Fl3cjKL6TTps9WfwCpJmGS3mxLipomO2GyS4WIdCJslAK7j_6nY2t_BMJjg4fEOajqAt31FQNIALcBG_Ocjz1GbBbvIV-1aw&usqp=CAE"
+    },
+    {
+        "name": "Tecno POVA 6 PRO 5G | 256+12 | Meteorite Grey",
+        "price": "₹21,899.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSe2mi4Ec3oqqUsErleiTmj8iyYIQJYkuCQe9AGD5Loa0OmiiFtUxfhCAcLm4yxIB7eKdbvTZP0y_lKB_EG4ufSeSSUQfHucuqMkbqyN981W_CxCMayBlCudg&usqp=CAE"
+    },
+    {
+        "name": "Apple iPhone 12 Mini Blue by Cashify",
+        "price": "₹28,299.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSW8KtYOs4jueIYdWWA887Xlek0lKLzGG02URPsQebsRq2ewsUu3Oox1s7Ohbb7yxWZmC_QupGYsHFalSr52fs_s5wRedO84w&usqp=CAE"
+    },
+    {
+        "name": "Tecno Camon 20 Premier 5G (Serenity Blue, 8GB RAM,512GB Storage)",
+        "price": "₹25,999.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRVg4gAXU2qJ9xDYqTYnvETt0GFkevoTcV0sfk2uYXnFfFW2y4ptlbMjApgbZNAdGU8Y52REM8RhLWt7k_IDPJ4LSmT4xES6dORNnrIYrl6Wf-MmK1ehSisDg&usqp=CAE"
+    },
+    {
+        "name": "Vivo X90 256 GB (Breeze Blue, 8 GB RAM)",
+        "price": "₹55,990.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRqFSOqUqMA5lA9eKT9ggWRbF_7eXQWzr41TDXibGAQ1uNGOSmJt7i3GYnH-jRC-RZQQ27VaVaF-gieopXc72h_77CNLhxZrxuMlG88fYP2NiDBuL16SeCYAg&usqp=CAE"
+    },
+    {
+        "name": "Refurbished Motorola Moto G24 Power (Ink Blue, 128GB, 8GB RAM)",
+        "price": "₹9,444.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQjYGMG64poSzjkifRSMsLYdSmuCGN6UFrDr5gPdPxExlii3Zx--A1l25cw_3lZCP8GIIEMAQPb319ta2HMiel_uGHjjvsA_lwBeUcvDDog2tWwQGSpGdHkyw&usqp=CAE"
+    },
+    {
+        "name": "REDMI 11 PRIME 5G 6GB 128GB CHROME SILVER",
+        "price": "₹14,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRdC6Zvi8wZduh3PIGxBWIuCcQzE_d6iXf5aK54jrCuyme4qD3VvC8v1kQ2ZEOtFRuEDbCIhWmJbwnlDakzv6b5Q96F1pkGvvs-Je8VZ-LdGLS9_gx4MzzFYg&usqp=CAE"
+    },
+    {
+        "name": "Lava Blaze Pro 5G (Starry Night, 8GB RAM, 128GB Storage)| 50 MP AI Camera |120 Hz ...",
+        "price": "₹12,749.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRCm7AFrdivsB1ZGjz0r-jsUhZpFK-ho2J1GfqYuRqFXbbfGQIvnZS2H3Y-toTSAmYLHD3B3YQvFu52hNTxZ_M11X9jg6mPeFJH0mhNzv7twNJPfiY22FTU&usqp=CAE"
+    },
+    {
+        "name": "Apple iPhone 14 Pro (128 GB, Deep Purple)",
+        "price": "₹94,990.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQjbv_3jRA7QoqpKEMGzmUNCtjq9gyZ65p_oPXuubQc09BhQahnJBYdtBFIHS0kYY4HLp2Btnrw0tXg5kiX-vA6RAWA1YKg3FLOABhMu70XSM6AKt9Ik1WgN4M&usqp=CAE"
+    },
+    {
+        "name": "Redmi 12 5G (6GB 128GB) Moonstone Silver",
+        "price": "₹11,499.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ0p3B3IwKQvkZGbTTUWloBBepuxnNMFidMO8EIMJMulhbVVJw3kA8-6kzEc3sMBUAJe-KOZswWxQr1unMYYfWKSyht7AARsdRJyguIDOdEXJUvOPcXvVWF4w&usqp=CAE"
+    },
+    {
+        "name": "Infinix Note 12 Pro 5G (Snowfall, 128 GB) (8 GB RAM)",
+        "price": "₹10,599.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT7cBtc959122fdcI2KdVwB2Na04hqEEY0s4vnU2jbO3w-kbBJcC8NvO7f7HHdGxdGwZHJHt-RwZhS0cZIO4PEDv-Y3RzUhw45Hr3uEbJk&usqp=CAE"
+    },
+    {
+        "name": "POCO M4 Pro 5G (Cool Blue, 4GB RAM 64GB Storage) Dual Sim 5G",
+        "price": "₹13,500.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR23lBntnpagi2cBe2_y4PwUC84kXdHWM7mDssd6yDRUf0m-SOjKquhBGBDpGOQw1OMr1BVaMtT1OZWUsBKg2CT2Psf_WipFCIhNa96PMaQq-LM_FfDCKPV&usqp=CAE"
+    },
+    {
+        "name": "Motorola G72, 128 GB, 6 GB RAM, Meteorite Grey, Mobile Phone",
+        "price": "₹11,499.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSr9l5FNDxJSgetePDPzU02U5oTgGHHCnXBvuxG8w-WaW6ah-wxNdT8_WqtVvJ6ivkX8K-7k4raevUHluypA92ds4dPU_xGo3K-Xdp0kGPmezKki3wh2c6n&usqp=CAE"
+    },
+    {
+        "name": "Lava Blaze 2 5G (Glass Lavender, 6GB RAM, 128GB Storage)| Stunning Ring Light| 50 ...",
+        "price": "₹11,200.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTCtm9RO7crAb1dYlpXXHrJcnIZ0Zb7s5DTx02pMzIXMnfiItjnkCdWfejZYSdiObkOVD_AeBrmFSac4re-ntY36sFSzRG3W9H82vTA-V6yDje0reIBaknA&usqp=CAE"
+    },
+    {
+        "name": "Lava Agni 2 5G (Glass Viridian, 8GB RAM, 256GB Storage)",
+        "price": "₹25,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRarr2qwn9DgCUNoOsz-9VfzwuwbSpCbntMCQu-lEJjskwHAlLK5uqeqcM2zDGRaoHHPP9zK-NVERDvWoFzz3uFO8upv-BrIGU3fZ358TZha1LWX_ccNPC7Ug&usqp=CAE"
+    },
+    {
+        "name": "Nokia C32 128 GB (Mint, 4 GB RAM)",
+        "price": "₹7,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQgCb1q9dZpSvr1uUG_turavh-z8Nu3ZRd2_GRWm8_-ShAib1B904EmR_2WkWO3e3xZywg9SXgcAoTQejiAhYfzjO3r22ele5LA4cXbG7g&usqp=CAE"
+    },
+    {
+        "name": "Tecno Spark 10C 128 GB, 8 GB RAM, Magic Skin Orange, Mobile Phone",
+        "price": "₹9,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQNXxg8Xz7iapnpg4FdrHKie8awv92BT4uYICi3GYloVDHTuJYJ9cIB_4w9ctgBvjpXO26bebKR9zRKG-q5RiCrmykC4Ye0X47yF5EEvU4PNS6bU9tmHG_p&usqp=CAE"
+    },
+    {
+        "name": "realme narzo 60X 5G(Stellar Green,6GB,128GB Storage)",
+        "price": "₹11,999.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTQ9OgeZJbdXvn4-_ckcv8HEgyv5_OobE6unt7DZBZnunBjsXEO3x8kRAuLHgOcik0LVowQ8oHuVSEzJ7x3QxDAAFyEOo-TZX0yhumdFbBjuMnj0ogsYUF01g&usqp=CAE"
+    },
+    {
+        "name": "TECNO PHANTOM X2 5G 8GB 256GB STARDUST GREY",
+        "price": "₹36,999.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRqSR6MVHIDSHARoVINavUGtXp4mIo3uwB-b66sk3om7OAWyye_Pnh-njWNrFHY6a45Ecb4rQSqyIlrBXpcrg3Nb-jOMBUm5qyPCQ95SDaDl_Swvd2eRpk5&usqp=CAE"
+    },
+    {
+        "name": "Redmi Note 12 Pro 5G Glacier Blue 12 GB + 256 GB",
+        "price": "₹29,499.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ5qCVioiea6QFWTLZMQDnN5XQCPplN2gBcJjPNqdsI3jNBnxVLDighs-dQKTYskgu-v2XFRnhYwjomw-DWa3C_BJzpS7ZMIAf5glc3Sai8nJcQTtg19dbLUA&usqp=CAE"
+    },
+    {
+        "name": "Vivo X80 128 GB (Cosmic Black, 8 GB RAM)",
+        "price": "₹28,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR9R0iiaCvoIldWDJwFRmA3aDGN9N2CvE8AKRts98yMcBknu990F54X_3CawnsVNMLDIEA_4OjmjorUWyZIpUp7d5kO6iiXeyPlwbmR89b-ceKav5jtsYJZ&usqp=CAE"
+    },
+    {
+        "name": "Redmi 12 (Moonstone Silver,6GB RAM, 128GB Storage)",
+        "price": "₹9,999.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQy7x3JE-Jy3SqZC56RS_eUBtSy4hZfqqLBdyPsPsQt-GMId4KnTwKWKlt4OBsEq0vaeuNFoLOuWjD1NVrp5N1onqxeJ285ML2rASB_pXhkQpWFhUb-AO2Q&usqp=CAE"
+    },
+    {
+        "name": "Samsung Galaxy S22 Ultra 5G Burgundy - 128GB/8GB by Ovantica",
+        "price": "₹52,999.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRuMowHGPS5l75u-EuteeSJFg9E5SUInrTTLGJ1XIh84_9L_oPUAlUoSi7pLWSoLN5IUxQsZMqpI6hpPFLhbWMQ-SG0VrG3mg&usqp=CAE"
+    },
+    {
+        "name": "iQOO Neo 7 Pro 5G (Fearless Flame, 8GB RAM, 128GB Storage)",
+        "price": "₹30,999.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSdD9oNnFKm6wCNHqbn0yGBqQgwIUw2w0Mj6Lnjdi3rYgRaQIJISNvKdk33ifNrfdCbxQJKqolP_4knGqqyMWlEuhi_4Jv9LbSf4c7OE7BIScwQ_GdBIOCifw&usqp=CAE"
+    },
+    {
+        "name": "RedMagic 9 Pro Global Version smartphone Gaming Phone Snapdragon 8 Gen 3 6500mAh ...",
+        "price": "₹67,437.51 + tax",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRPjidxaOTPNohjOZknt5O9SI9ZcHLH05SnqzUQhwWbFQgJ9Nu4cpSi-BGjeCiyBsTrZywtZlnn-TDai5kgkKo3SyQIiMYbzKXTQ6NWjb4&usqp=CAE"
+    },
+    {
+        "name": "OnePlus 11 5G Mobile with 50MP Camera, 5000 mAh Battery",
+        "price": "₹56,990.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTKhdrpShVfDJO58McvPddw9UZT0osK-rDm9_YQ-Gknju00iWVL7lwDI4MxWoZ0EDxrZn23b9aSBjXgb_kodG4-c_Zdugn23SPS2SYUAiTslxR7o8kkgu6uvA&usqp=CAE"
+    },
+    {
+        "name": "Exachat K60 Pro Unlocked Cell Phone 5g, 6gb256gb Android 13 Phones 6.7 Fhddisplay ...",
+        "price": "₹31,170.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRddyJh-5cvHsxb6DzR8meUjpOuwdBc8sHp0vC8F5AAyYfHsnPrdbxrLESZ0jZfn--6cqmo1hhJbr-FE3FuWEMraxazwz36uHPxlYetwoDs&usqp=CAE"
+    },
+    {
+        "name": "Apple iPhone 11 (128 GB, White)",
+        "price": "₹29,999.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTPOWbQR0LwefnIgzExkTq0OqmBnWiYz0HMVkKYW5wO4pZ0QCBzUZOGUrSQU3orwxECQHgIYsDYzwJSyoUfJSAd0S6AT9xlE0epwrtm6H24e3sgKcUdprfB&usqp=CAE"
+    },
+    {
+        "name": "Lava Storm 5G (Thunder Black, 8GB RAM, 128GB ROM)",
+        "price": "₹12,499.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQm3tg3rpPiFYBRT5C0kNY4K5SAXvonm3-RbGd3dZDF_SNJC52FXAEUUDw85q2vc_x-8Dnz_u1gfILZ7wMdZlhausRDkAY-jAGiieQe50AvvEg-L3zvzQ7u&usqp=CAE"
+    },
+    {
+        "name": "Xiaomi Redmi K20 Pro",
+        "price": "₹26,200.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRSADonDzrPt_EK3PaOUeMrV35Yb0eNwB6sBq07d0VFYN-S7d7Nu3v2DHspCj2BNikyUURjgptBraVvwwlRMvoPs0qqzCOdpRCDH2-DsmCh_dE0FKtEz_yJ&usqp=CAE"
+    },
+    {
+        "name": "Motorola Moto G04 128 GB (Concord Black, 8 GB RAM)",
+        "price": "₹8,990.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTzITRqwOcYmne8bx_G9CbgGx3cxAS5fG6bREXUcxFvSNJ96nyqESk1mow9dNpA_jXd5_tLHtCi2NuAUlsAvQIEnS5TJFLkxBwYloewekFEMZpqEMMf-kKSxg&usqp=CAE"
+    },
+    {
+        "name": "Redmi Note 13 Pro(8GB+256GB) Arctic White",
+        "price": "₹27,999.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSZB_g6BTHbZj6wnBaBX334mRYI52eFjxCxFkg8YPvty2ZwkZ8st1PLdq7WL6lHIGc8Bxlf3IoOD6LqkcqDSKu0jULSKojc6PEjks0G9QAFAHsuQ4c9Z7ANdQ&usqp=CAE"
+    },
+    {
+        "name": "Vivo Y56 5G",
+        "price": "₹24,999.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRYqF9cl5M5dSWy_JOwtWxhi7gZC5GRNl36BtXuCANo4MWQFih5qimGhILDIAfSAmSlfsWnM-VxgmhYSpMXd7bvn0EKk_eJ30V8gEev_HUhx4YCkqMvQW0U2Q&usqp=CAE"
+    },
+    {
+        "name": "I Kall 6.8 inch Display, 6 GB RAM 128 GB Storage Grey 4G Smartphone, S2",
+        "price": "₹8,990.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcROQ2vNnbzfy8dPL0QWewHIDuvac-Z8BVyStbeN_-3h0jS71ShlJ0NelhLigYas__M-6l1_iabfksmddMy05WzoNqrHFsoNURCHveL-mD6JuSVZdM9HrOYZ&usqp=CAE"
+    },
+    {
+        "name": "ASUS Zenfone 10 5G Dual Sim Mobile Phone, 5.9144Hz AMOLED Display,8GB RAM ...",
+        "price": "₹56,874.48 + tax",
+        "image": "https: //encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTQmXQ4rQxKBa9xq5OI_wzMliTeYkJb5bgE0oH532WGbjslY5rEflW0s7YWTyTjdWn2TePZoQB0hFX9e9XEzzZGEfXtwaxLyixTbC557yJQT6jcg2betFZGfw&usqp=CAE"
+    },
+    {
+        "name": "Vivo Y72 5G (Slate Gray, 8GB RAM, 128GB Storage)",
+        "price": "₹21,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSO0bKYiq8mImNygL2pkiUQ7BDpXoMf7lbRp0m0Ak3EA3-4Z1wZ-XqqLpWVEICP2BzB3rxTTo6QBdABADVURoVqfMVgwXKoNtQu4rdB-bEetayi8LIxxe6wkw&usqp=CAE"
+    },
+    {
+        "name": "realme 10 Pro 5G (6GB RAM, 128GB, Nebula Blue)",
+        "price": "₹14,999.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRBojf-OnlNxKBR7nJJBcjQkhnRAg_VfVjq2Hnd2O-ZxL-dzWycw8UNW5jM042MN23nNhvcobyryVV5mkWiCQco4VlMiIPEf2g6SAI7b6xosUWVbsBMEUuZxQ&usqp=CAE"
+    },
+    {
+        "name": "TECNO Phantom X2 Pro 5G Mars Orange (12GB RAM,256GB Storage)",
+        "price": "₹44,000.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRnAyYhKAukgYiG-tKWL5e7C2aNR18w3KZkDbqjmmzkXLg3iSzKM3S3aSiB8rpug9vakkSTqTwyypL-Mday9UuTIOkRo4ZSH-WFGAKbMXQ7-qkNU_wVMbn3QA&usqp=CAE"
+    },
+    {
+        "name": "Rainbow Spectrum Oppo F21 Pro Android Smart Mobile Phone With 6.43 Inch Full Hd+ ...",
+        "price": "₹31,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT08RhMV9KaJ-_osRjFdg0j_LTb5kByTI8DuSxU1VXI0cl2ma0BQ2Jx--Z28txLT92M6rx1Df9M30_2TnEHLWxYswltf6ZwyBY4qdGuqyNVCKlNIxp9d4tQ9g&usqp=CAE"
+    },
+    {
+        "name": "Vivo Y16 64 GB (Drizzling Gold, 4 GB RAM)",
+        "price": "₹8,999.00",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSHETAcqf7AZPoNDNbNqpJA9JuQ3lv-S31WyCIhqAExzXqfRnMyL98RP5TrmkiKeAhZw1bYNELk0icFF7A3WFLH6yu5Ti_UPCSevlvC7tMlHpuMr5XYctZ7DQ&usqp=CAE"
+    },
+    {
+        "name": "realme 10 Pro 5G",
+        "price": "₹18,999.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSzhBSEPYj1uWEv7ahOE3YcI76VIMWN5Hgr_IAECOaDU7u0ete9yyB7u6Lrgm1asmxxADyUjstqohiIuN0hPG2FjTu8mrIWZcpUl64pGQKezn5r5bWTpZYO6A&usqp=CAE"
+    },
+    {
+        "name": "Xiaomi Qin F22 Pro Keypad Touch screen Phone in india Black",
+        "price": "₹17,990.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS1ZcEbLNXtRjcQGHWacANpny00GY4OmwJ5PqgqBPc9MYAdgUFnm06yNshbuVt3VDaYuiD3AWA3ZjUlRJDdGYIbPq4Z6F5IkyhlPK_Ekfy5J0yGYuOh2H9d&usqp=CAE"
+    },
+    {
+        "name": "Realme C67 5G 128 GB (Dark Purple, 6 GB RAM)",
+        "price": "₹14,499.00",
+        "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSS2RJXHr45CgPZjF-EH_SeOJyWWjTDHCF9DFky6pYZs1RfRJbhTS2_y8qdVO76P6SekCwKnfNKX0x9jX6IeEfbQ2D7Y-fPei6nPhwKR8yAcsXdNjE77pZAYA&usqp=CAE"
+    },
+    {
+        "name": "Samsung galaxy S23",
+        "price": "₹49,999.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQyCGJWUP6rGWpRGtWOv6Zn6enrziMYgzxUl47aFFKPltrHtHx53bBIfGnMtXeM22YoplT8f7-Qn8N9EKbbiWqdgOW9j1Ta7gVfxuTUTMk&usqp=CAE"
+    },
+    {
+        "name": "vivo X90 5G, 50MP Camera, 8GB+256GB, Triple Back Cameras, Screen Fingerprint ...",
+        "price": "₹61,727.86",
+        "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR8FhhfMZGCgsT6YSY0u5yITmi95zVFTwHlWWq5EMQpSnx5C6qSTp0-QuLX3Xlsk9kD01VUusl9ot12LfQGZEuuzWeLjrmcLglljLGBzy2D0YYjoeCodgjt&usqp=CAE"
+    },
+    {
+        "name": "Apple iPhone 11 128 GB / WHITE",
+        "price": "₹21,999.00",
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT-dHAU_SkWnh9-WyrONJa8-VeHqDVoG5zFO1Q9Tcu7p-Bhp6S01lByMaeUc33voIHPlqBYh6wpHcRBmMlXG86RZCYqhuF1tUD3RIXr5l8&usqp=CAE"
+    },
+    {
+        "name": "ONEPLUS NORD N10 | 5G | 6GB + 128GB | 64MP Camera | 6.49inch | Single SIM - New ...",
+        "price": "₹10,499.00",
+        "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ4e7C8sA3h6AslEJ4x1Xl-awjjXWD6Bp0HE1Axt-wZDBx8YpiYA3fQtJq4T2cCeiOJDv-sd6msuggQUqKOFOOIWXLCSq1gAnUhNJhEddCc&usqp=CAE"
+    }
+]

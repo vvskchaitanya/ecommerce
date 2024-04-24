@@ -10,6 +10,6 @@ import com.vvsk.ecommerce.ecommerceapi.entity.UserEntity;
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Integer>{
 
-    List<UserEntity> findByUsername(String username);
+    List<UserEntity> findByName(String name);
 
 }

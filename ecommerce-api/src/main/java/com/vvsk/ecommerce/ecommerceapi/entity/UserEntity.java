@@ -16,13 +16,13 @@ public class UserEntity {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "user_name")
-    private String username;
+    @Column(name = "name")
+    private String name;
 
     @Column(name = "password")
     private String password;
 
-    @Column(name = "user_role")
+    @Column(name = "role")
     private String role;
 
     @Column(name = "email")
@@ -34,14 +34,6 @@ public class UserEntity {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {
@@ -66,6 +58,14 @@ public class UserEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     

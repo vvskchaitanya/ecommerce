@@ -27,7 +27,7 @@ public class UserService {
 
     public User get(String username){
         User user = null;
-        List<UserEntity> users = userRepository.findByUsername(username);
+        List<UserEntity> users = userRepository.findByName(username);
         if(users.size()>0){
             user=mapper.map(users.get(0));
         }

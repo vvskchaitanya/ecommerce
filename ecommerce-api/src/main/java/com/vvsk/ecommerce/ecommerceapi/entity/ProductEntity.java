@@ -17,16 +17,20 @@ public class ProductEntity {
     private int id;
 
     @Column(name = "name")
-    private String username;
+    private String name;
 
     @Column(name = "description")
-    private String password;
+    private String description;
 
     @Column(name = "price")
     private String price;
 
     @Column(name = "image")
     private String image;
+
+    @Column(name = "stock")
+    private int stock;
+
 
     public int getId() {
         return id;
@@ -36,20 +40,20 @@ public class ProductEntity {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getDescription() {
+        return description;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getPrice() {

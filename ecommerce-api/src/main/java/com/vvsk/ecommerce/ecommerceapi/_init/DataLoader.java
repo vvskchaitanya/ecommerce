@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mysql.cj.xdevapi.JsonArray;
 import com.vvsk.ecommerce.ecommerceapi.entity.ProductEntity;
 import com.vvsk.ecommerce.ecommerceapi.repository.ProductRepository;
 
@@ -27,12 +26,14 @@ public class DataLoader {
     }
 
     private void products(){
-        String f = this.getClass().getResource("products.json").getFile();
+        String f = this.getClass().getClassLoader().getResource("products.json").getFile();
+        System.out.print(f);
         try{
-            List<ProductEntity> products = new ObjectMapper().readValue(new File(f), new TypeReference<List<ProductEntity>>(){});
+            /*List<ProductEntity> products = new ObjectMapper().readValue(new File(f), new TypeReference<List<ProductEntity>>(){});
             products.forEach(p->{
                 productRepository.save(p);
             });
+            */
         }catch(Exception e){
             e.printStackTrace();
         }
