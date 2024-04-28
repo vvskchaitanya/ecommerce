@@ -29,11 +29,10 @@ public class DataLoader {
         String f = this.getClass().getClassLoader().getResource("products.json").getFile();
         System.out.print(f);
         try{
-            /*List<ProductEntity> products = new ObjectMapper().readValue(new File(f), new TypeReference<List<ProductEntity>>(){});
+            List<ProductEntity> products = new ObjectMapper().readValue(new File(f), new TypeReference<List<ProductEntity>>(){});
             products.forEach(p->{
                 productRepository.save(p);
             });
-            */
         }catch(Exception e){
             e.printStackTrace();
         }

@@ -3,6 +3,7 @@ package com.vvsk.ecommerce.ecommerceapi.controller;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,8 +26,7 @@ public class ProductManagement {
     @Autowired
     ProductRepository productRepository;
 
-    @Autowired
-    ProductMapper mapper;
+    ProductMapper mapper = Mappers.getMapper(ProductMapper.class);;
 
     @Operation(summary="Retrieve all products")
     @GetMapping("/")

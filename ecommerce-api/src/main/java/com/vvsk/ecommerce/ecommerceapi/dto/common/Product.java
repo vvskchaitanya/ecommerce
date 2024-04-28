@@ -4,7 +4,7 @@ public class Product {
     String id;
     String name;
     String description;
-    Double price;
+    String price;
     Integer stock;
     
     public String getId() {
@@ -25,10 +25,10 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Double getPrice() {
+    public String getPrice() {
         return price;
     }
-    public void setPrice(Double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
     public Integer getStock() {

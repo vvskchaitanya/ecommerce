@@ -29,7 +29,7 @@ public class ProductEntity {
     private String image;
 
     @Column(name = "stock")
-    private int stock;
+    private int stock = 10;
 
 
     public int getId() {
@@ -72,6 +72,15 @@ public class ProductEntity {
         this.image = image;
     }
 
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    
     
     
 

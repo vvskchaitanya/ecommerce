@@ -7,7 +7,7 @@ import com.vvsk.ecommerce.ecommerceapi.entity.ProductEntity;
 
 @Mapper
 public interface ProductMapper {
-
+    
     Product map(ProductEntity productEntity);
 
 }
