@@ -27,7 +27,7 @@ public class LoginService {
         if(users.size()>0){
             UserEntity user = users.get(0);
             if(encoder.matches(password, user.getPassword())){
-                return tokenService.generateToken(user.getName());
+                return tokenService.generateToken(user.getName(),user.getRole());
             };
         }
 

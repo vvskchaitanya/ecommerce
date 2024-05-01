@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -17,7 +19,7 @@ import jakarta.annotation.PostConstruct;
 public class SecurityConfiguration{
 
     @Autowired
-    JwtTokenService tokenService;
+    JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Autowired
     ObjectMapper objectMapper;
@@ -35,8 +37,9 @@ public class SecurityConfiguration{
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(c->c.disable());
-        http.authorizeHttpRequests(req->{
-            req.requestMatchers("/swagger-ui/**","/v3/**","/users/register","/authentication/login").permitAll()
+        http.addFilterBefore(jwtAuthenticationFilter,UsernamePasswordAuthenticationFilter.class)
+        .authorizeHttpRequests(req->{
+            req.requestMatchers("/","/swagger-ui/**","/v3/**","/users/register","/authentication/login").permitAll()
             .anyRequest().authenticated();
         });
         return http.build();
