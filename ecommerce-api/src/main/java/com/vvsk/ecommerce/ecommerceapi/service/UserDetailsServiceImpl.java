@@ -18,7 +18,7 @@ import jakarta.annotation.PostConstruct;
 
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService{
+public class UserDetailsServiceImpl{
 
     @Autowired
     UserRepository userRepository;
@@ -36,7 +36,7 @@ public class UserDetailsServiceImpl implements UserDetailsService{
         this.userRepository.save(u);
     }
 
-    @Override
+
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         List<UserEntity> users = this.userRepository.findByName(username);
