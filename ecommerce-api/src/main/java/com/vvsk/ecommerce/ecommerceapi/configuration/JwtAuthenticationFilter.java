@@ -13,11 +13,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.Ordered;
-import org.springframework.core.annotation.Order;
 
 @Service
-@Order(Ordered.HIGHEST_PRECEDENCE)
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     @Autowired
@@ -30,7 +27,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             token = token.substring(7);
             try {
                 JwtAuthenticationToken authentication = jwtTokenService.verify(token);
-                authentication.setAuthenticated(true);  
+                authentication.setAuthenticated(true);
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             } catch (Exception e) {
                 e.printStackTrace();

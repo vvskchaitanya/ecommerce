@@ -10,6 +10,7 @@ import com.vvsk.ecommerce.ecommerceapi.configuration.JwtAuthenticationToken;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwe;
+import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -33,9 +34,9 @@ public class JwtTokenService {
     }
 
     public JwtAuthenticationToken verify(String token){
-        Jwe<Claims> jwe = JWT_PARSER.parse(token).accept(Jwe.CLAIMS);
-        String username = (String) jwe.getPayload().get("username");
-        String role = (String) jwe.getPayload().get("role");
+        Jws<Claims> jws = JWT_PARSER.parse(token).accept(Jws.CLAIMS);
+        String username = (String) jws.getPayload().get("username");
+        String role = (String) jws.getPayload().get("role");
         return new JwtAuthenticationToken(username, List.of(new SimpleGrantedAuthority(role)));
     }
 
