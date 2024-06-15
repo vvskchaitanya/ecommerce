@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row justify-content-center m-5">
+        <div class="col-md-6">
+            <img [src]="product?.image" alt="{{ product?.name }}" id="productImg">
+        </div>
+        <div class="col-md-6">
+            <div *ngIf="product">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p><b>Price: {{ product.price }}</b></p>
+                <div>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" style="width:50px" name="quantity" [(ngModel)]="selectedQuantity" min="1">
+                </div>
+                <button class="btn btn-primary mt-3" (click)="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>

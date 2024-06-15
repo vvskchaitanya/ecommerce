@@ -3,6 +3,7 @@ import { User } from '../app.models';
 import { CartComponent } from '../cart/cart.component';
 import { Router, RouterModule } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -15,12 +16,13 @@ export class HeaderComponent {
 
   user?:User;
 
-  constructor(private router:Router){
-
+  constructor(private auth:AuthService){
+    this.auth.user.subscribe(u=>this.user=u);
   }
 
-  logout(){
 
+  logout(){
+    this.auth.logout();
   }
 
 }

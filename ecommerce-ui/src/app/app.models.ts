@@ -3,6 +3,15 @@ export interface User{
     name:string;
     email:string;
     role:string;
-    contact:string;
-    address:string;
+    contact?:string;
+    address?:string;
 }
+
+export interface Product {
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+    imgUrl: string;
+    image:string;
+  }
