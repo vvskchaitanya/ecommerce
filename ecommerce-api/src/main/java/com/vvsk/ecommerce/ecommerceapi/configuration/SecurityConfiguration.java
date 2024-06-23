@@ -1,7 +1,5 @@
 package com.vvsk.ecommerce.ecommerceapi.configuration;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -25,7 +23,7 @@ public class SecurityConfiguration{
     @Autowired
     ObjectMapper objectMapper;
 
-    @Value("app.public.endpoints")
+    @Value("#{'${app.public.endpoints}'.split(',')}")
     String[] allowList;
 
     @PostConstruct()
@@ -43,8 +41,7 @@ public class SecurityConfiguration{
         http.csrf(c->c.disable());
         http.addFilterAfter(jwtAuthenticationFilter,UsernamePasswordAuthenticationFilter.class);
         http.authorizeHttpRequests(req->{
-            req.requestMatchers("/","/swagger-ui/**","/v3/**","/users/register","/authentication/login").permitAll()
-            .requestMatchers(allowList).permitAll()
+            req.requestMatchers(allowList).permitAll()
             .anyRequest().authenticated();
         });
         return http.build();

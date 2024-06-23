@@ -5,6 +5,7 @@ public class Product {
     String name;
     String description;
     String price;
+    String image;
     Integer stock;
     
     public String getId() {
@@ -36,6 +37,12 @@ public class Product {
     }
     public void setStock(Integer stock) {
         this.stock = stock;
+    }
+    public String getImage() {
+        return image;
+    }
+    public void setImage(String image) {
+        this.image = image;
     }
 
     

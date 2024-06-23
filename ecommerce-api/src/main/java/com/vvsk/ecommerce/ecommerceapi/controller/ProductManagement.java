@@ -29,7 +29,7 @@ public class ProductManagement {
     ProductMapper mapper = Mappers.getMapper(ProductMapper.class);;
 
     @Operation(summary="Retrieve all products")
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<List<Product>> list(){
         List<Product> products = productRepository.findAll().stream().map(mapper::map).collect(Collectors.toList());    
         return new ResponseEntity<>(products,HttpStatus.OK);

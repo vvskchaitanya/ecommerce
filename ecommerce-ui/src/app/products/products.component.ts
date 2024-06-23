@@ -18,13 +18,12 @@ export class ProductsComponent {
 
   products: Product[] = [];
 
-  constructor(private productService: ProductsService,private http:HttpClient) { }
+  constructor(private productService: ProductsService) { }
 
   ngOnInit() {
-    this.http.get("products.json").subscribe((res:any)=>{
-      this.products = res;
-      this.productService.products = this.products;
-    });
+    this.productService.refresh.subscribe(()=>{
+      this.products = this.productService.products;
+    })
   }
 
 }
