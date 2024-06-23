@@ -2,7 +2,7 @@ image: gitpod/workspace-mysql
 
 tasks:
     - name: Install Java 17
-      init: sdk install java 17.0.4.1-tem < /dev/null
-      command: cd ecommerce-api && mvn spring-boot:run
+      before: sdk install java 17.0.4.1-tem < /dev/null
+      init: cd ecommerce-api && mvn spring-boot:run
     - name: UI Build
       command: cd ecommerce-ui && npm install && npm start
