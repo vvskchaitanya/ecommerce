@@ -2,7 +2,6 @@ package com.vvsk.ecommerce.ecommerceapi._init;
 
 import java.util.List;
 import java.io.File;
-import java.lang.reflect.Type;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
