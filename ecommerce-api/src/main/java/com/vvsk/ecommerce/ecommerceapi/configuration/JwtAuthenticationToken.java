@@ -6,7 +6,8 @@ import java.util.Collection;
 
 public class JwtAuthenticationToken implements Authentication {
 
-    private final String principal;
+    private static final long serialVersionUID = 1L;
+	private final String principal;
     private final Collection<? extends GrantedAuthority> authorities;
     private boolean authenticated = false;
 

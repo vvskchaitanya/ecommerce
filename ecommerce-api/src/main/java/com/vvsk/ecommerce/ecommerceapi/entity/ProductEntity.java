@@ -2,9 +2,12 @@ package com.vvsk.ecommerce.ecommerceapi.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -30,9 +33,21 @@ public class ProductEntity {
 
     @Column(name = "stock")
     private int stock = 10;
+    
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "category", nullable = false)
+    public CategoryEntity category;
 
 
-    public int getId() {
+    public CategoryEntity getCategory() {
+		return category;
+	}
+
+	public void setCategory(CategoryEntity category) {
+		this.category = category;
+	}
+
+	public int getId() {
         return id;
     }
 
@@ -80,8 +95,6 @@ public class ProductEntity {
         this.stock = stock;
     }
 
-    
-    
     
 
 }

@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import com.vvsk.ecommerce.ecommerceapi.configuration.JwtAuthenticationToken;
 
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwe;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.Jwts;
@@ -37,7 +36,7 @@ public class JwtTokenService {
         Jws<Claims> jws = JWT_PARSER.parse(token).accept(Jws.CLAIMS);
         String username = (String) jws.getPayload().get("username");
         String role = (String) jws.getPayload().get("role");
-        return new JwtAuthenticationToken(username, List.of(new SimpleGrantedAuthority(role)));
+        return new JwtAuthenticationToken(username, List.of(new SimpleGrantedAuthority("ROLE_"+role)));
     }
 
 }
