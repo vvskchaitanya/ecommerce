@@ -6,19 +6,20 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.vvsk.ecommerce.ecommerceapi.dto.common.Customer;
+import com.vvsk.ecommerce.ecommerceapi.dto.common.User;
 import com.vvsk.ecommerce.ecommerceapi.dto.request.RegisterRequest;
-import com.vvsk.ecommerce.ecommerceapi.entity.CustomerEntity;
+import com.vvsk.ecommerce.ecommerceapi.entity.ProfileEntity;
 import com.vvsk.ecommerce.ecommerceapi.entity.UserEntity;
-import com.vvsk.ecommerce.ecommerceapi.mapper.CustomerMapper;
+import com.vvsk.ecommerce.ecommerceapi.mapper.ProfileMapper;
 import com.vvsk.ecommerce.ecommerceapi.mapper.UserMapper;
-import com.vvsk.ecommerce.ecommerceapi.repository.CustomerRepository;
+import com.vvsk.ecommerce.ecommerceapi.repository.ProfileRepository;
 import com.vvsk.ecommerce.ecommerceapi.repository.UserRepository;
 
 @Service
 public class RegistrastionServiceImpl implements RegistrationService {
 	
 	@Autowired
-	CustomerRepository customerRepo;
+	ProfileRepository profileRepository;
 	
 	@Autowired
 	UserRepository userRepo;
@@ -26,23 +27,24 @@ public class RegistrastionServiceImpl implements RegistrationService {
 	@Autowired
 	BCryptPasswordEncoder encoder;
 	
-	CustomerMapper mapper = Mappers.getMapper(CustomerMapper.class);
 	UserMapper userMapper = Mappers.getMapper(UserMapper.class);
 	
+	ProfileMapper profileMapper = Mappers.getMapper(ProfileMapper.class);
+	
 	@Override
-	public Boolean register(RegisterRequest request) {
+	public User register(RegisterRequest request) {
 		
-		CustomerEntity customerEntity = mapper.map(request.getCustomer());
+		ProfileEntity profileEntity = profileMapper.map(request);
 		
 		UserEntity userEntity  = userMapper.map(request);
 		userEntity.setPassword(encoder.encode(request.getPassword()));
 		userEntity.setRole("USER");
 		
-		this.userRepo.save(userEntity);
+		userEntity = this.userRepo.save(userEntity);
 		
-		this.customerRepo.save(customerEntity);
+		this.profileRepository.save(profileEntity);
 		
-		return true;
+		return userMapper.map(userEntity);
 		
 	}
 

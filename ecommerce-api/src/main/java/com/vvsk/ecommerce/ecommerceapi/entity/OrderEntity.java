@@ -1,9 +1,14 @@
 package com.vvsk.ecommerce.ecommerceapi.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "orders")
 public class OrderEntity {
@@ -13,8 +18,8 @@ public class OrderEntity {
     private int id;
     
     @ManyToOne
-    @JoinColumn(name = "customer", nullable = false)
-    private CustomerEntity customer;
+    @JoinColumn(name = "user", nullable = false)
+    private UserEntity user;
     
     @ManyToOne
     @JoinColumn(name = "product", nullable = false)
@@ -41,5 +46,5 @@ public class OrderEntity {
     @Column(name = "payment_method", nullable = false, length = 50)
     private String paymentMethod;
 
-    // Getters and setters
+    
 }

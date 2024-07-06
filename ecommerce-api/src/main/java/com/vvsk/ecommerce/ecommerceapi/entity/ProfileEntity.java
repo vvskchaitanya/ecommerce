@@ -8,12 +8,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "customers")
-public class CustomerEntity {
+@Table(name = "profile")
+public class ProfileEntity extends UserBaseEntity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    
+    @Column(name = "title", nullable = false, length = 50)
+    private String title;
     
     @Column(name = "first_name", nullable = false, length = 50)
     private String firstName;
@@ -21,11 +24,11 @@ public class CustomerEntity {
     @Column(name = "last_name", nullable = false, length = 50)
     private String lastName;
     
-    @Column(name="email", length = 100, unique = true)
+    @Column(name="email", length = 100, unique = true )
     private String email;
     
     @Column(length = 20)
-    private String phone;
+    private String contact;
     
     @Column(length = 255)
     private String address;
@@ -36,11 +39,11 @@ public class CustomerEntity {
     @Column(length = 50)
     private String state;
     
-    @Column(name = "zip_code", length = 10)
-    private String zipCode;
-    
     @Column(length = 50)
     private String country;
+    
+    @Column(length = 10)
+    private String zip;
 
 	public int getId() {
 		return id;
@@ -73,13 +76,22 @@ public class CustomerEntity {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public String getPhone() {
-		return phone;
+	
+	
+	public String getContact() {
+		return contact;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
 	}
 
 	public String getAddress() {
@@ -104,14 +116,6 @@ public class CustomerEntity {
 
 	public void setState(String state) {
 		this.state = state;
-	}
-
-	public String getZipCode() {
-		return zipCode;
-	}
-
-	public void setZipCode(String zipCode) {
-		this.zipCode = zipCode;
 	}
 
 	public String getCountry() {

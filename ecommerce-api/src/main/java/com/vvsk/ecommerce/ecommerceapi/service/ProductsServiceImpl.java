@@ -12,10 +12,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.vvsk.ecommerce.ecommerceapi.dto.common.Product;
-import com.vvsk.ecommerce.ecommerceapi.entity.CategoryEntity;
 import com.vvsk.ecommerce.ecommerceapi.entity.ProductEntity;
 import com.vvsk.ecommerce.ecommerceapi.mapper.ProductMapper;
-import com.vvsk.ecommerce.ecommerceapi.repository.CategoryRepository;
 import com.vvsk.ecommerce.ecommerceapi.repository.ProductRepository;
 
 @Service
@@ -26,9 +24,6 @@ public class ProductsServiceImpl implements ProductService {
 
     @Autowired
     ProductRepository productRepository;
-    
-    @Autowired
-    CategoryRepository categoryRepository;
     
 	@Override
 	public List<Product> getProducts() {
@@ -76,10 +71,6 @@ public class ProductsServiceImpl implements ProductService {
 	@Override
 	public Product add(Product product) {
 		ProductEntity productEntity = mapper.map(product);
-		
-		CategoryEntity category  = this.categoryRepository.findByName("Mobiles").get(0);
-		
-		productEntity.setCategory(category);
 		
 		productEntity = this.productRepository.save(productEntity);
 		

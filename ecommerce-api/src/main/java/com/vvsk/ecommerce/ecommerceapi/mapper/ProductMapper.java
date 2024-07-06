@@ -9,10 +9,8 @@ import com.vvsk.ecommerce.ecommerceapi.entity.ProductEntity;
 @Mapper
 public interface ProductMapper {
     
-	@Mapping(source="category.name",target="category")
     Product map(ProductEntity productEntity);
 	
-	@Mapping(source="category",ignore = true, target = "category")
 	ProductEntity map(Product product);
 
 }

@@ -34,16 +34,14 @@ public class ProductEntity {
     @Column(name = "stock")
     private int stock = 10;
     
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "category", nullable = false)
-    public CategoryEntity category;
+    @Column(name = "category")
+    private String category;
 
-
-    public CategoryEntity getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
-	public void setCategory(CategoryEntity category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 

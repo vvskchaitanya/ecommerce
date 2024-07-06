@@ -13,20 +13,17 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "ID")
     private int id;
-
-    @Column(name = "name")
+    
+    @Column(name="NAME", length = 100, unique = true,insertable = true, updatable = false)
     private String name;
 
-    @Column(name = "password")
+    @Column(name = "PASSWORD")
     private String password;
 
-    @Column(name = "role")
+    @Column(name = "ROLE")
     private String role;
-
-    @Column(name = "email")
-    private String email;
 
     public int getId() {
         return id;
@@ -51,23 +48,14 @@ public class UserEntity {
     public void setRole(String role) {
         this.role = role;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
+    
     public String getName() {
-        return name;
-    }
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
+	public void setName(String name) {
+		this.name = name;
+	}
     
 
 }
