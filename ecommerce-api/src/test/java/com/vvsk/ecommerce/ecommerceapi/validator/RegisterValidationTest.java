@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.vvsk.ecommerce.ecommerceapi.dto.request.RegisterRequest;
+import com.vvsk.ecommerce.ecommerceapi.dto.response.ErrorMessage;
 
 public class RegisterValidationTest {
 	
@@ -16,10 +17,10 @@ public class RegisterValidationTest {
 		RegisterRequest request = new RegisterRequest();
 		
 		// When validation has been triggered on that request
-		List<String> messages = RegistrationValidation.validate(request);
+		List<ErrorMessage> messages = RegistrationValidation.validate(request);
 		
 		// Then we should validation message for that request
-		Assertions.assertEquals("Username is required for registration", messages.get(0));
+		Assertions.assertEquals("Username is required", messages.get(0).getMessage());
 		
 	}
 	
@@ -32,10 +33,10 @@ public class RegisterValidationTest {
 		request.setPassword(null);
 		
 		// When validation has been triggered on that request
-		List<String> messages = RegistrationValidation.validate(request);
+		List<ErrorMessage> messages = RegistrationValidation.validate(request);
 		
 		// Then we should validation message for that request
-		Assertions.assertEquals("Password is required for registration", messages.get(0));
+		Assertions.assertEquals("Password is required", messages.get(0).getMessage());
 		
 	}
 	
@@ -48,10 +49,10 @@ public class RegisterValidationTest {
 		request.setPassword("test");
 		
 		// When validation has been triggered on that request
-		List<String> messages = RegistrationValidation.validate(request);
+		List<ErrorMessage> messages = RegistrationValidation.validate(request);
 		
 		// Then we should validation message for that request
-		Assertions.assertEquals("Password should have minimum of 8 characters", messages.get(0));
+		Assertions.assertEquals("Password should have minimum of 8 characters", messages.get(0).getMessage());
 		
 	}
 
