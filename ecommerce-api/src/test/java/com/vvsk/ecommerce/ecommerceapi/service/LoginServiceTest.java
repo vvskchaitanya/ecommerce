@@ -1,5 +1,6 @@
 package com.vvsk.ecommerce.ecommerceapi.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
@@ -50,6 +51,21 @@ public class LoginServiceTest {
 
         // Then
         Assertions.assertEquals("MyAwesomeToken", token);
+
+    }
+
+
+    @Test
+    void testAuthenticate_Failed() {
+        // Given
+		
+        Mockito.when(userRepository.findByName("siva")).thenReturn(new ArrayList<>());
+
+        // When
+        String token = loginService.authenticate("siva", "mypassword");
+
+        // Then
+        Assertions.assertNull(token);
 
     }
 }
