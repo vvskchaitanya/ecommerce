@@ -14,3 +14,15 @@ This repository contains a full-stack e-commerce application consisting of a Jav
 - [License](#license)
 
 ## Project Structure
+
+```plaintext
+ecommerce/
+├── ecommerce-api/    # Spring Boot backend
+│   ├── src/          # Source files
+│   ├── pom.xml       # Maven configuration file
+│   └── ...           # Other backend files
+├── ecommerce-ui/     # Angular frontend
+│   ├── src/          # Source files
+│   ├── angular.json  # Angular CLI configuration file
+│   └── ...           # Other frontend files
+└── README.md         # Project README file
