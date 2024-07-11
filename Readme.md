@@ -27,6 +27,8 @@ ecommerce/
 │   └── ...           # Other frontend files
 └── README.md         # Project README file
 
+```
+
 
 ## Getting Started
 
