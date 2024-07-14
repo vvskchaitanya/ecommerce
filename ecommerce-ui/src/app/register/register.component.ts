@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -10,4 +11,14 @@ import { RouterModule } from '@angular/router';
 })
 export class RegisterComponent {
 
+  username?:string;
+  password?: string;
+
+ constructor(http: HttpClient){
+  
+ }
+
+ register(){
+
+ }
 }

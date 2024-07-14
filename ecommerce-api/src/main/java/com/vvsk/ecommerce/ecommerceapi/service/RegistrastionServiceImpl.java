@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.vvsk.ecommerce.ecommerceapi.dto.common.Customer;
+import com.vvsk.ecommerce.ecommerceapi.dto.common.Profile;
 import com.vvsk.ecommerce.ecommerceapi.dto.common.User;
 import com.vvsk.ecommerce.ecommerceapi.dto.request.RegisterRequest;
 import com.vvsk.ecommerce.ecommerceapi.entity.ProfileEntity;
@@ -38,6 +38,8 @@ public class RegistrastionServiceImpl implements RegistrationService {
 		
 		UserEntity userEntity  = userMapper.map(request);
 		userEntity.setPassword(encoder.encode(request.getPassword()));
+
+		// By Default User will get user role
 		userEntity.setRole("USER");
 		
 		userEntity = this.userRepo.save(userEntity);
