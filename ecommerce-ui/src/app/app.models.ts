@@ -12,6 +12,5 @@ export interface Product {
     name: string;
     description: string;
     price: number;
-    imgUrl: string;
     image:string;
   }
