@@ -3,7 +3,6 @@ package com.vvsk.ecommerce.ecommerceapi.controller;
 import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vvsk.ecommerce.ecommerceapi.dto.request.LoginRequest;
+import com.vvsk.ecommerce.ecommerceapi.dto.response.ErrorCode;
+import com.vvsk.ecommerce.ecommerceapi.dto.response.Response;
 import com.vvsk.ecommerce.ecommerceapi.service.LoginService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -28,9 +29,9 @@ public class AuthController {
 
     @Operation(summary = "Login endpoint for the users")
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody @Valid LoginRequest request){
+    public Response<String> login(@RequestBody @Valid LoginRequest request){
         String token = loginService.authenticate(request.getUsername(), request.getPassword());
-        return Objects.isNull(token)? new ResponseEntity<>(HttpStatus.UNAUTHORIZED): new ResponseEntity<>(token,HttpStatus.OK);    
+        return Objects.isNull(token)? Response.fail(ErrorCode.LOGIN_FAILED): Response.success(token);
     }
 
     @Operation(summary = "Session validation endpoint for the users")
