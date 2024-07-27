@@ -1,0 +1,24 @@
+.toast-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 1080;
+}
+
+.toast {
+    opacity: 1;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toast-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toast-body strong {
+    margin-right: 0.5rem;
+}

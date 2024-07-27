@@ -1,24 +1,37 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { ToastService } from '../toast/toast.service';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule,RegisterComponent,FormsModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
 
-  username?:string;
-  password?: string;
+  user = { username: '', password: '' };
 
- constructor(http: HttpClient){
-  
- }
+  constructor(
+    private authService: AuthService,
+    private toastService: ToastService
+  ) { }
 
- register(){
-
+  onRegister() {
+    this.authService.register(this.user).subscribe((response: any) => {
+      if(response.success){
+        // Show Success Toast Message
+        this.toastService.showSuccess("Registration Success","User "+this.user.username+" is registered successfully, Please proceed to login");
+        // Reset User fields
+        this.user = { username:"",password:""};
+      }else{
+        // Show Failed Toast Message
+        this.toastService.showError("Registration Failed", "Unable to register "+this.user.username+". Please reach out to ecom@support.com")
+      }
+    });
  }
 }
