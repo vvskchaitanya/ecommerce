@@ -5,6 +5,7 @@ import {  ProductsService } from  '../services/products.service';
 import { EMPTY, catchError } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { LoaderService } from '../loader/loader.service';
 
 @Component({
   selector: 'app-product',
@@ -21,19 +22,23 @@ export class ProductComponent {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductsService,
+    private loaderService: LoaderService
   ) {}
 
   ngOnInit() {
+    this.loaderService.show();
     const productId = this.route.snapshot.params['id'];
     this.productService.getProductById(productId)
       .pipe(
         catchError(err => {
+          this.loaderService.hide();
           console.error('Error fetching product details:', err);
           return EMPTY;
         })
       )
       .subscribe(
         (product: Product) => {
+          this.loaderService.hide();
           this.product = product;
         }
       );

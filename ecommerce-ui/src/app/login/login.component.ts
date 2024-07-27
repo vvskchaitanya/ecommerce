@@ -4,6 +4,8 @@ import { AuthService } from '../services/auth.service';
 import { FormsModule, NgModel } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { User } from '../app.models';
+import { LoaderService } from '../loader/loader.service';
+import { ToastService } from '../toast/toast.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,11 @@ export class LoginComponent {
 
   public user:any = { username: "", password: "" };
 
-  constructor(private authService: AuthService, private router:Router) { }
+  constructor(
+    private authService: AuthService,
+    private router:Router,
+    private toastService: ToastService
+  ) { }
 
   async onLogin() {
     console.log("Logging in for "+this.user.username);
@@ -30,8 +36,9 @@ export class LoginComponent {
         console.log(loginuser);
         this.authService.createSession(loginuser);
         this.router.navigate(["home"]);
+        this.toastService.showSuccess("Login Success ",loginuser.id);
       }else{
-        alert(response.code);
+        this.toastService.showError("Login Failed ",this.user.username);
       }
     });
   }
