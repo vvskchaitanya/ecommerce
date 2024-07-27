@@ -17,7 +17,7 @@ export class HeaderComponent {
   user?:User;
 
   constructor(private auth:AuthService){
-    this.auth.user.subscribe(u=>this.user=u);
+    //this.auth.user.subscribe(u=>this.user=u);
   }
 
 

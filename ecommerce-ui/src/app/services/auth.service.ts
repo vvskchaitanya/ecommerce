@@ -1,21 +1,28 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
-import { User } from '../app.models';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+ 
+  
+  private apiUrl = 'http://localhost:4200/api';
+  user: any;
+  auth: any;
 
-  user:Subject<User | undefined> =  new Subject<User | undefined>();
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
-
-  login(){
-    this.user.next({id:"test",name:"Chaitanya",email:"test@test.com",role:"USER"});
+  register(user: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/users/register`, user);
   }
 
-  logout(){
-    this.user.next(undefined);
+  login(user: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/authentication/login`, user);
+  }
+
+  logout() {
+    this.auth.logout();
   }
 }
