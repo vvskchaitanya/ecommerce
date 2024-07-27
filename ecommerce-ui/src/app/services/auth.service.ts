@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
  
   
-  private apiUrl = 'http://localhost:4200/api';
+  private apiUrl = '/api';
   user: any;
   auth: any;
 
