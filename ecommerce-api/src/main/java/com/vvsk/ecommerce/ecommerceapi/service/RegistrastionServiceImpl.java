@@ -44,7 +44,7 @@ public class RegistrastionServiceImpl implements RegistrationService {
 		
 		userEntity = this.userRepo.save(userEntity);
 		
-		this.profileRepository.save(profileEntity);
+		//this.profileRepository.save(profileEntity);
 		
 		return userMapper.map(userEntity);
 		

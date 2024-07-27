@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { User } from '../app.models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
  
+  user:Subject<User | undefined> =  new Subject<User | undefined>();
   
   private apiUrl = '/api';
-  user: any;
-  auth: any;
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +23,13 @@ export class AuthService {
   }
 
   logout() {
-    this.auth.logout();
+    sessionStorage.clear();
+    this.user.next(undefined);
+    
+  }
+
+  createSession(user:User){
+    sessionStorage.setItem("user",JSON.stringify(user));
+    this.user.next(user);
   }
 }
