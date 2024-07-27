@@ -1,0 +1,86 @@
+<div class="container mt-5">
+    <h2>My Profile</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <select id="title" formControlName="title" class="form-select">
+          <option value="">Select Title</option>
+          <option value="Mr">Mr</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Ms">Ms</option>
+          <option value="Dr">Dr</option>
+        </select>
+        <div *ngIf="profileForm.get('title')?.touched && profileForm.get('title')?.invalid" class="text-danger">
+          Title is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" id="firstName" class="form-control" formControlName="firstName">
+        <div *ngIf="profileForm.get('firstName')?.touched && profileForm.get('firstName')?.invalid" class="text-danger">
+          First name is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" id="lastName" class="form-control" formControlName="lastName">
+        <div *ngIf="profileForm.get('lastName')?.touched && profileForm.get('lastName')?.invalid" class="text-danger">
+          Last name is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" formControlName="email">
+        <div *ngIf="profileForm.get('email')?.touched && profileForm.get('email')?.invalid" class="text-danger">
+          Valid email is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="contact" class="form-label">Contact</label>
+        <input type="text" id="contact" class="form-control" formControlName="contact">
+        <div *ngIf="profileForm.get('contact')?.touched && profileForm.get('contact')?.invalid" class="text-danger">
+          Valid contact number is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="city" class="form-label">City</label>
+        <input type="text" id="city" class="form-control" formControlName="city">
+        <div *ngIf="profileForm.get('city')?.touched && profileForm.get('city')?.invalid" class="text-danger">
+          City is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="state" class="form-label">State</label>
+        <input type="text" id="state" class="form-control" formControlName="state">
+        <div *ngIf="profileForm.get('state')?.touched && profileForm.get('state')?.invalid" class="text-danger">
+          State is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" id="country" class="form-control" formControlName="country">
+        <div *ngIf="profileForm.get('country')?.touched && profileForm.get('country')?.invalid" class="text-danger">
+          Country is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="zip" class="form-label">ZIP</label>
+        <input type="text" id="zip" class="form-control" formControlName="zip">
+        <div *ngIf="profileForm.get('zip')?.touched && profileForm.get('zip')?.invalid" class="text-danger">
+          Valid ZIP code is required.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="profileForm.invalid">Save</button>
+      <button type="submit" class="btn btn-secondary mx-2">Cancel</button>
+    </form>
+  </div>
+  

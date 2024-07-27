@@ -61,6 +61,11 @@ public class UserManagement {
     	if(!CollectionUtils.isEmpty(errors)) {
     		return Response.fail(ErrorCode.REGISTRATION_FAILED, errors);
     	}
+
+        if(!this.registrationService.validate(request)){
+            return Response.fail(ErrorCode.USER_ALREADY_EXISTS);
+        }
+
         User user = this.registrationService.register(request);
         return Response.success(user);
     }

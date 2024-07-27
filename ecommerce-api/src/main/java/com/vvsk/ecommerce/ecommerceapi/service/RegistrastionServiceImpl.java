@@ -34,8 +34,6 @@ public class RegistrastionServiceImpl implements RegistrationService {
 	@Override
 	public User register(RegisterRequest request) {
 		
-		ProfileEntity profileEntity = profileMapper.map(request);
-		
 		UserEntity userEntity  = userMapper.map(request);
 		userEntity.setPassword(encoder.encode(request.getPassword()));
 
@@ -43,11 +41,17 @@ public class RegistrastionServiceImpl implements RegistrationService {
 		userEntity.setRole("USER");
 		
 		userEntity = this.userRepo.save(userEntity);
+
+		ProfileEntity profileEntity = profileMapper.map(userEntity);
 		
-		//this.profileRepository.save(profileEntity);
+		this.profileRepository.save(profileEntity);
 		
 		return userMapper.map(userEntity);
 		
+	}
+
+	public boolean validate(RegisterRequest request){
+		return this.userRepo.findByName(request.getUsername()).isEmpty();
 	}
 
 }

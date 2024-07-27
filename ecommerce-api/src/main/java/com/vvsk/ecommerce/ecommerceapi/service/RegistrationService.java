@@ -5,6 +5,8 @@ import com.vvsk.ecommerce.ecommerceapi.dto.request.RegisterRequest;
 
 public interface RegistrationService {
 	
-	User register(RegisterRequest customer);
+	User register(RegisterRequest request);
+
+	boolean validate(RegisterRequest request);
 
 }

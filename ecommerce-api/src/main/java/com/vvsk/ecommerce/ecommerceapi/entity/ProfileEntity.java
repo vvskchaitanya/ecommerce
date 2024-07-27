@@ -15,13 +15,13 @@ public class ProfileEntity extends UserBaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     
-    @Column(name = "title", nullable = false, length = 50)
+    @Column(name = "title", nullable = true, length = 50)
     private String title;
     
     @Column(name = "first_name", nullable = false, length = 50)
     private String firstName;
     
-    @Column(name = "last_name", nullable = false, length = 50)
+    @Column(name = "last_name", nullable = true, length = 50)
     private String lastName;
     
     @Column(name="email", length = 100, unique = true )

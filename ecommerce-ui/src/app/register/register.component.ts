@@ -25,12 +25,12 @@ export class RegisterComponent {
     this.authService.register(this.user).subscribe((response: any) => {
       if(response.success){
         // Show Success Toast Message
-        this.toastService.showSuccess("Registration Success","User "+this.user.username+" is registered successfully, Please proceed to login");
+        this.toastService.showSuccess("Registration Success","User: "+this.user.username+", Please proceed to login");
         // Reset User fields
         this.user = { username:"",password:""};
       }else{
         // Show Failed Toast Message
-        this.toastService.showError("Registration Failed", "Unable to register "+this.user.username+". Please reach out to ecom@support.com")
+        this.toastService.showError("Registration Failed", "User: "+this.user.username+". Please reach out to ecom@support.com")
       }
     });
  }
