@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../app.models';
 import { CartComponent } from '../cart/cart.component';
 import { Router, RouterModule } from '@angular/router';
@@ -12,11 +12,14 @@ import { AuthService } from '../services/auth.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
 
   user?:User;
 
   constructor(private auth:AuthService,private router:Router){
+    this.auth.user.subscribe(u=>this.user=u);
+  }
+  ngOnInit(): void {
     this.auth.user.subscribe(u=>this.user=u);
   }
 

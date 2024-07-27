@@ -12,7 +12,14 @@ export class AuthService {
   
   private apiUrl = '/api';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+   let usersession = sessionStorage.getItem("user");
+    if(usersession!=null){
+      let user:User = JSON.parse(usersession);
+      this.user.next(user);
+      console.log("Refreshing User Session",user);
+    } 
+  }
 
   register(user: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/users/register`, user);
