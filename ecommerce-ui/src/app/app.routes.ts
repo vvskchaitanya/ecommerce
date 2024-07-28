@@ -6,6 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CartComponent } from './cart/cart.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { authGuard } from './services/auth.guard';
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 
 export const routes: Routes = [
     {path:"", redirectTo:"home",pathMatch:"full"},
@@ -15,5 +18,8 @@ export const routes: Routes = [
     {path:"login", component:LoginComponent},
     {path:"register", component:RegisterComponent},
     {path:"cart", component: CartComponent},
-    {path:"profile", component: ProfileComponent}
+    {path:"profile", component: ProfileComponent},
+    {path:"unauthorized",component:UnauthorizedComponent},
+    {path:"admin",component:DashboardComponent, canActivate:[authGuard]},
+    {path:"admin/:view",component:DashboardComponent, canActivate:[authGuard]}
 ];

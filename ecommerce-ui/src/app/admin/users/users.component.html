@@ -1,0 +1,23 @@
+<div class="container mt-4">
+    <h2 class="mb-4">Manage Users</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>
+                    <select class="form-select" [(ngModel)]="user.role" (ngModelChange)="changeUserRole(user, $event)">
+                        <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

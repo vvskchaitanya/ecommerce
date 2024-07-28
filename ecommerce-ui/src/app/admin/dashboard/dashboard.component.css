@@ -1,0 +1,9 @@
+.sidebar {
+    height: 100vh;
+    padding: 15px;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff;
+}

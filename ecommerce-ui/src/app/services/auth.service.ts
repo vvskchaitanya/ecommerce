@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../app.models';
 
@@ -8,7 +8,7 @@ import { User } from '../app.models';
 })
 export class AuthService {
  
-  user:Subject<User | undefined> =  new Subject<User | undefined>();
+  user:BehaviorSubject<User | undefined> =  new BehaviorSubject<User | undefined>(undefined);
   
   private apiUrl = '/api';
 
