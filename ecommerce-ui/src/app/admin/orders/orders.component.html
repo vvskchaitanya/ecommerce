@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <h2 class="mb-4">Manage Orders</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>User ID</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <td>{{ order.orderId }}</td>
+                <td>{{ order.userId }}</td>
+                <td>{{ order.productId }}</td>
+                <td>{{ order.productName }}</td>
+                <td>
+                    <select class="form-select" [(ngModel)]="order.status"
+                        (ngModelChange)="changeOrderStatus(order, $event)">
+                        <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
