@@ -7,7 +7,7 @@ export const authGuard: CanActivateFn = (route, state) => {
   if(userObj!=null){
     user = JSON.parse(userObj);
   }
-  if(state.url.indexOf("admin")>-1 && user.role!="ADMIN"){
+  if(state.url.includes("admin") && (user==undefined || user.role!="ADMIN")){
     let router = inject(Router);
     router.navigate(['/unauthorized']);
     return false;

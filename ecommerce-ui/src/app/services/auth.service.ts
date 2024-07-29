@@ -35,8 +35,9 @@ export class AuthService {
     
   }
 
-  createSession(user:User){
+  createSession(user:User,token:string){
     sessionStorage.setItem("user",JSON.stringify(user));
+    sessionStorage.setItem("token",token);
     this.user.next(user);
   }
 }

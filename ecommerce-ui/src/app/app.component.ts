@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { CommonModule } from '@angular/common';
 import { LoaderComponent } from './loader/loader.component';
 import { ToastComponent } from './toast/toast.component';
+import { LoaderService } from './loader/loader.service';
 
 @Component({
   selector: 'app-root',

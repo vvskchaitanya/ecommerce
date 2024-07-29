@@ -34,7 +34,7 @@ export class LoginComponent {
         tokenparse = JSON.parse(tokenparse);
         let loginuser: User = {id:tokenparse.id,name:tokenparse.username,role:tokenparse.role,email:tokenparse.id};
         console.log(loginuser);
-        this.authService.createSession(loginuser);
+        this.authService.createSession(loginuser,token);
         loginuser.role=="ADMIN"?this.router.navigate(["admin"]):this.router.navigate(["home"])
         this.toastService.showSuccess("Login Success ",loginuser.id);
       }else{

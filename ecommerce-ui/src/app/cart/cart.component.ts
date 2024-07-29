@@ -1,5 +1,6 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -12,22 +13,27 @@ export class CartComponent {
   cartItems: CartItem[] = [];
   totalPrice: number = 0;
 
+  constructor(private cartService:CartService){
+
+  }
+
   ngOnInit(): void {
-    this.cartItems = this.loadCartItems();
+    this.loadCartItems();
     this.calculateTotalPrice();
   }
 
-  loadCartItems(): CartItem[] {
-    // Mock data for cart items
-    return [
-      { id: 1, name: 'Laptop', price: 999.99, quantity: 1 },
-      { id: 2, name: 'Smartphone', price: 499.99, quantity: 2 },
-      { id: 3, name: 'Headphones', price: 99.99, quantity: 1 }
-    ];
+  loadCartItems() {
+    this.cartItems = [];
+    this.cartService.cart.forEach((c:any)=>{
+      this.cartItems.push({id:c.product.id,name:c.product.name,price:c.product.price,quantity:c.quantity});
+    })
+
   }
 
   calculateTotalPrice(): void {
-    this.totalPrice = this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    this.totalPrice = this.cartItems.reduce((total, item) => {
+      return total + parseInt(item.price.replace(",",""))*item.quantity
+    },0);
   }
 
   // Method to clear the cart
@@ -47,7 +53,7 @@ export class CartComponent {
 interface CartItem {
   id: number;
   name: string;
-  price: number;
+  price: string;
   quantity: number;
 }
 
