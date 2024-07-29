@@ -6,6 +6,8 @@ import { EMPTY, catchError } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { LoaderService } from '../loader/loader.service';
+import { CartService } from '../services/cart.service';
+import { ToastService } from '../toast/toast.service';
 
 @Component({
   selector: 'app-product',
@@ -22,7 +24,9 @@ export class ProductComponent {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductsService,
-    private loaderService: LoaderService
+    private loaderService: LoaderService,
+    private cartService: CartService,
+    private toastService: ToastService
   ) {}
 
   ngOnInit() {
@@ -45,6 +49,10 @@ export class ProductComponent {
   }
 
   addToCart() {
+    if(this.product){
+      this.cartService.addtoCart(this.product,this.selectedQuantity);
+      this.toastService.showSuccess("Success","Product added to cart");
+    }   
   }
 
 }

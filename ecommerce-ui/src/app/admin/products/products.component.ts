@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Product } from '../../app.models';
 import { NgFor } from '@angular/common';
+import { AdminService } from '../admin.service';
+import { ToastService } from '../../toast/toast.service';
 
 @Component({
   selector: 'app-products',
@@ -16,22 +18,24 @@ export class ProductsComponent {
   currentPage: number = 1;
   pageSize: number = 10; // Number of items per page
 
+  constructor(private adminService:AdminService,private toastService:ToastService){
+    
+  }
+
   ngOnInit(): void {
-    // Initialize with mock data
-    this.products = this.generateProducts();
+    this.generateProducts();
     this.paginate();
   }
 
-  generateProducts(): Product[] {
-    // Create mock products
-    return Array.from({ length: 50 }, (_, i) => ({
-      id: i + 1,
-      name: `Product ${i + 1}`,
-      price: Math.random() * 100,
-      stock: Math.floor(Math.random() * 100),
-      description:"",
-      image:""
-    }));
+  generateProducts(){
+    this.adminService.getProducts().subscribe(response=>{
+      this.toastService.showSuccess("Success","Products fetched successfully");
+      console.log(response);
+      this.products = response;
+      this.paginate();
+    },error=>{
+      this.toastService.showError("Failed","Unable to retrieve products");
+    })
   }
 
   paginate(): void {

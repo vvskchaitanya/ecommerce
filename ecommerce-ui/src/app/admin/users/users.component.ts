@@ -2,6 +2,8 @@ import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { User } from '../../app.models';
 import { FormsModule } from '@angular/forms';
+import { AdminService } from '../admin.service';
+import { ToastService } from '../../toast/toast.service';
 
 @Component({
   selector: 'app-users',
@@ -16,18 +18,21 @@ export class UsersComponent {
   roles: string[] = ['ADMIN', 'USER'];
 
   ngOnInit(): void {
-    this.users = this.generateUsers();
+    this.generateUsers();
   }
 
-  generateUsers(): User[] {
-    // Mock user data
-    return [
-      { id: "1", name: 'Alice', role: 'USER',email:"" },
-      { id: "2", name: 'Bob', role: 'ADMIN',email:"" },
-      { id: "3", name: 'Charlie', role: 'USER',email:"" },
-      { id: "4", name: 'David', role: 'ADMIN',email:"" },
-      { id: "5", name: 'Eve', role: 'USER',email:"" }
-    ];
+  constructor(private adminService:AdminService,private toastService:ToastService){
+
+  }
+
+  generateUsers() {
+    this.adminService.getUsers().subscribe(response=>{
+      this.toastService.showSuccess("Success","Users fetched successfully");
+      console.log(response);
+      this.users = response.data;
+    },error=>{
+      this.toastService.showError("Failed","Unable to retrieve users");
+    })
   }
 
   changeUserRole(user: User, role: string): void {
