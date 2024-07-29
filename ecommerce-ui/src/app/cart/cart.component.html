@@ -21,7 +21,7 @@
                     <td>{{ item.name }}</td>
                     <td>{{ item.price }}</td>
                     <td>{{ item.quantity }}</td>
-                    <td>{{ item.price +" * "+ item.quantity }}</td>
+                    <td>{{ item.price * item.quantity }}</td>
                     <td>
                         <button (click)="removeItem(item.id)" class="btn btn-danger btn-sm"><i class="material-icons">delete</i></button>
                     </td>

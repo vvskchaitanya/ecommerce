@@ -1,10 +1,12 @@
 package com.vvsk.ecommerce.ecommerceapi.dto.common;
 
+import java.math.BigDecimal;
+
 public class Product {
     String id;
     String name;
     String description;
-    String price;
+    BigDecimal price;
     String image;
     Integer stock;
     String category;
@@ -27,10 +29,10 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
-    public String getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
-    public void setPrice(String price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
     public Integer getStock() {
