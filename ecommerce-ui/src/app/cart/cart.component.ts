@@ -1,11 +1,11 @@
-import { NgFor, NgIf } from '@angular/common';
+import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [NgIf,NgFor],
+  imports: [NgIf,NgFor,CurrencyPipe],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
@@ -27,6 +27,7 @@ export class CartComponent {
     this.cartService.cart.forEach((c:any)=>{
       this.cartItems.push({id:c.product.id,name:c.product.name,price:c.product.price,quantity:c.quantity});
     })
+    this.cartService.refresh.next(this.cartItems.length);
 
   }
 
@@ -38,15 +39,15 @@ export class CartComponent {
 
   // Method to clear the cart
   clearCart(): void {
-    this.cartItems = [];
+    this.cartService.removeFromCart();
     this.calculateTotalPrice();
-    sessionStorage.removeItem("cart");
   }
 
   // Method to remove an item from the cart
   removeItem(itemId: string): void {
     this.cartItems = this.cartItems.filter(item => item.id !== itemId);
     this.calculateTotalPrice();
+    this.cartService.refresh.next(this.cartItems.length);
   }
 
 }

@@ -26,7 +26,9 @@
             <a class="nav-link"  [routerLink]="['/login']" [routerLinkActive]="['active']">Login</a>
           </li>
           <li class="nav-item mx-1" *ngIf="user && user.role=='USER'">
-            <a class="nav-link" [routerLink]="['/cart']" [routerLinkActive]="['active']"><i class="material-icons">shopping_cart</i></a>
+            <a class="nav-link" [routerLink]="['/cart']" [routerLinkActive]="['active']"><i class="material-icons">shopping_cart</i>
+              <span class="badge bg-primary" *ngIf="cartCount!=0">{{cartCount}}</span>
+            </a>
           </li>
           <li class="nav-item dropdown mx-1" *ngIf="user">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

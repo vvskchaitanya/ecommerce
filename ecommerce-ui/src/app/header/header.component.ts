@@ -6,6 +6,7 @@ import { NgIf } from '@angular/common';
 import { AuthService } from '../services/auth.service';
 import { FormsModule } from '@angular/forms';
 import { ProductsService } from '../services/products.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -20,13 +21,17 @@ export class HeaderComponent implements OnInit{
 
   key:string = "";
 
+  cartCount:number = 0;
+
   constructor(
     private auth:AuthService,
     private router:Router,
-    private productsService:ProductsService
+    private productsService:ProductsService,
+    private cartService: CartService
 
   ){
     this.auth.user.subscribe(u=>this.user=u);
+    this.cartService.refresh.subscribe(c=>this.cartCount=c);
   }
   ngOnInit(): void {
     this.auth.user.subscribe(u=>this.user=u);
