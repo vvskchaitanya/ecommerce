@@ -20,7 +20,7 @@ export class ProductsService {
     });
   }
 
-  getProductById(productId: number): Observable<Product> {
+  getProductById(productId: string): Observable<Product> {
     for(var i in this.products){
       if(this.products[i].id==productId){
         return of(this.products[i]);

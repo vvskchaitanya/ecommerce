@@ -32,7 +32,7 @@ export class CartComponent {
 
   calculateTotalPrice(): void {
     this.totalPrice = this.cartItems.reduce((total, item) => {
-      return total + parseInt(item.price.replace(",",""))*item.quantity
+      return total + item.price*item.quantity
     },0);
   }
 
@@ -40,10 +40,11 @@ export class CartComponent {
   clearCart(): void {
     this.cartItems = [];
     this.calculateTotalPrice();
+    sessionStorage.removeItem("cart");
   }
 
   // Method to remove an item from the cart
-  removeItem(itemId: number): void {
+  removeItem(itemId: string): void {
     this.cartItems = this.cartItems.filter(item => item.id !== itemId);
     this.calculateTotalPrice();
   }
@@ -51,9 +52,9 @@ export class CartComponent {
 }
 
 interface CartItem {
-  id: number;
+  id: string;
   name: string;
-  price: string;
+  price: number;
   quantity: number;
 }
 
