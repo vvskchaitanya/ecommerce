@@ -1,5 +1,16 @@
 <div class="container">
-    <div class="row m-5">
+    <div class="row mx-5 my-2">
+      <div class="col-12">
+        <div class="d-inline float-end">
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" (click)="sort()">
+              <i class="material-icons">swap_vert</i>
+            </button>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <div class="row mx-5 my-1">
       <div class="col-md-3 mb-4" *ngFor="let product of products">
         <div class="card p-2" [routerLink]="['/product', product.id]" style="cursor: pointer;">
           <img [src]="product.image" id="productImg" alt="{{ product.name }}" height="200px">

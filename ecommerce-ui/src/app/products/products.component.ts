@@ -26,4 +26,8 @@ export class ProductsComponent {
     })
   }
 
+  sort(){
+    this.productService.sort();
+  }
+
 }
