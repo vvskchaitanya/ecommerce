@@ -46,6 +46,13 @@ public class ProductManagement {
         return new ResponseEntity<>(products,HttpStatus.OK);
     }
 
+    @Operation(summary="Search the products using name")
+    @GetMapping("/search")
+    public ResponseEntity<List<Product>> search(@RequestParam String name){
+        List<Product> products = productService.search(name);
+        return new ResponseEntity<>(products,HttpStatus.OK);
+    }
+
     @Operation(summary="Retrieve information of product")
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/info/{id}")

@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 
 import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -84,6 +86,16 @@ public class ProductsServiceImpl implements ProductService {
 		
 		return productOptional.isPresent()? mapper.map(productOptional.get()): null;
 		
+	}
+
+	@Override
+	public List<Product> search(String name) {
+		
+		List<ProductEntity> productEntities = productRepository.searchByName(name);
+
+		return productEntities.stream().map(mapper::map).collect(Collectors.toList());
+
+
 	}
 	
 	

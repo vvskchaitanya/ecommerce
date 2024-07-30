@@ -7,7 +7,7 @@
     <div class="d-inline-block m-2 w-100 text-center">
       <div class="input-group w-50">
         <span class="input-group-text" id="basic-addon1"><i class="material-icons">search</i></span>
-        <input type="search" placeholder="Search Products.." aria-label="Search" class="form-control d-inline-block w-50">
+        <input type="search" [(ngModel)]="key" (change)="search()" placeholder="Search Products.." aria-label="Search" class="form-control d-inline-block w-50">
       </div>
     </div>
     <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">  

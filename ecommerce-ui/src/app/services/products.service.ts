@@ -28,4 +28,11 @@ export class ProductsService {
     }
     return throwError("no product");
   }
+
+  search(name:string){
+    this.http.get("api/products/search?name="+name).subscribe((res:any)=>{
+      this.products = res;
+      this.refresh.next(true);
+    });
+  }
 }
