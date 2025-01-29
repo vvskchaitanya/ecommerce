@@ -3,13 +3,13 @@ import { RouterModule } from '@angular/router';
 
 import { Product } from '../app.models';
 import { ProductsService } from '../services/products.service';
-import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { CurrencyPipe, NgFor } from '@angular/common';
+import { ProductFilterComponent } from '../product-filter/product-filter.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [RouterModule, NgFor, CurrencyPipe],
+  imports: [RouterModule, NgFor, CurrencyPipe, ProductFilterComponent],
   providers: [],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
