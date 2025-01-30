@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Product } from '../app.models';
 import {  ProductsService } from  '../services/products.service';
 import { EMPTY, catchError } from 'rxjs';
@@ -8,6 +8,7 @@ import { NgIf } from '@angular/common';
 import { LoaderService } from '../loader/loader.service';
 import { CartService } from '../services/cart.service';
 import { ToastService } from '../toast/toast.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-product',
@@ -26,7 +27,9 @@ export class ProductComponent {
     private productService: ProductsService,
     private loaderService: LoaderService,
     private cartService: CartService,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private authService: AuthService,
+    private router:Router
   ) {}
 
   ngOnInit() {
@@ -50,9 +53,14 @@ export class ProductComponent {
 
   addToCart() {
     if(this.product){
-      this.cartService.addtoCart(this.product,this.selectedQuantity);
-      this.toastService.showSuccess("Success","Product added to cart");
+      let user = sessionStorage.getItem("user");
+      if(user==null){
+        this.router.navigateByUrl("login");
+      }else{
+        this.cartService.addtoCart(this.product,this.selectedQuantity);
+        this.toastService.showSuccess("Success","Product added to cart");
+
+      }
     }   
   }
-
 }

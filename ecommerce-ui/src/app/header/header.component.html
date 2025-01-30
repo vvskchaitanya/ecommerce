@@ -8,6 +8,15 @@
       <div class="input-group w-50">
         <span class="input-group-text" id="basic-addon1"><i class="material-icons">search</i></span>
         <input type="search" [(ngModel)]="key" (change)="search()" placeholder="Search Products.." aria-label="Search" class="form-control d-inline-block w-50">
+        <div class="input-group-text pointer dropdown" data-bs-toggle="dropdown">
+          <i class="material-icons">sort</i><span class="caret"></span>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" [ngClass]="{'active': sort==1}" (click)="applySort(1)">Price: Low to High</a></li>
+            <li><a class="dropdown-item" [ngClass]="{'active': sort==2}" (click)="applySort(2)">Price: High to Low</a></li>
+            <li><a class="dropdown-item" [ngClass]="{'active': sort==3}" (click)="applySort(3)">High Rating</a></li>
+            <li><a class="dropdown-item" [ngClass]="{'active': sort==4}" (click)="applySort(4)">Launch Date</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">  
@@ -21,7 +30,7 @@
           </li>
           <li class="nav-item mx-1" *ngIf="!user">
             <a class="nav-link"  [routerLink]="['/register']" [routerLinkActive]="['active']">Register</a>
-          </li>
+          </li>hre
           <li class="nav-item mx-1" *ngIf="!user">
             <a class="nav-link"  [routerLink]="['/login']" [routerLinkActive]="['active']">Login</a>
           </li>

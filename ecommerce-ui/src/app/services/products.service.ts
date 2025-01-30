@@ -13,8 +13,6 @@ export class ProductsService {
 
   products:Product[] = [];
 
-  sorted:boolean =false;
-
   constructor(private http:HttpClient) {
     this.http.get("api/products").subscribe((res:any)=>{
       this.products = res;
@@ -31,16 +29,21 @@ export class ProductsService {
     return throwError("no product");
   }
 
-  search(name:string){
+  search(name:string,sort?:number){
     this.http.get("api/products/search?name="+name).subscribe((res:any)=>{
       this.products = res;
+      if(sort!=null){
+        this.sort(sort);
+      }
       this.refresh.next(true);
     });
   }
 
-  sort(){
-    this.sorted?this.products.sort((a,b)=> b.price-a.price):this.products.sort((a,b)=> a.price-b.price);
-    this.refresh.next(true);
-    this.sorted=!this.sorted;
+  sort(l:number){
+    if(l==1){
+      this.products = this.products.sort((a,b)=> a.price-b.price);
+    }else if(l==2){
+      this.products = this.products.sort((a,b)=> b.price-a.price);
+    }
   }
 }
