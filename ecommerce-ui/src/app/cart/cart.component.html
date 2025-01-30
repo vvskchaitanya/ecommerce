@@ -30,7 +30,8 @@
         </table>
         <div class="cart-summary">
             <h4>Total Price: {{ totalPrice | currency :'INR'}}</h4>
-            <button (click)="clearCart()" class="btn btn-warning">Clear Cart</button>
+            <button (click)="proceed()" class="btn btn-primary mx-2">Checkout <i class="material-icons align-middle fw-bold">chevron_right</i></button>
+            <button (click)="clearCart()" class="btn btn-secondary">Clear Cart</button>
         </div>
     </div>
 </div>

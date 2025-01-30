@@ -1,6 +1,7 @@
 import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { CartService } from '../services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -13,7 +14,7 @@ export class CartComponent {
   cartItems: CartItem[] = [];
   totalPrice: number = 0;
 
-  constructor(private cartService:CartService){
+  constructor(private cartService:CartService, private router:Router){
 
   }
 
@@ -40,6 +41,7 @@ export class CartComponent {
   // Method to clear the cart
   clearCart(): void {
     this.cartService.removeFromCart();
+    this.cartItems= [];
     this.calculateTotalPrice();
   }
 
@@ -48,6 +50,11 @@ export class CartComponent {
     this.cartItems = this.cartItems.filter(item => item.id !== itemId);
     this.calculateTotalPrice();
     this.cartService.refresh.next(this.cartItems.length);
+  }
+
+  proceed():void{
+    this.cartService.payment.price = this.totalPrice;
+    this.router.navigate(["payment"]);
   }
 
 }

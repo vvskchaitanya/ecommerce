@@ -1,0 +1,12 @@
+.accordion-button {
+    font-weight: bold;
+  }
+  
+  .form-control, .form-select {
+    border-radius: 5px;
+  }
+  
+  .accordion-body {
+    background-color: #f8f9fa;
+  }
+  

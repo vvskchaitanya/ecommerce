@@ -4,7 +4,7 @@ import { Product } from '../app.models';
 import {  ProductsService } from  '../services/products.service';
 import { EMPTY, catchError } from 'rxjs';
 import { FormsModule } from '@angular/forms';
-import { NgIf } from '@angular/common';
+import { CurrencyPipe, NgIf } from '@angular/common';
 import { LoaderService } from '../loader/loader.service';
 import { CartService } from '../services/cart.service';
 import { ToastService } from '../toast/toast.service';
@@ -13,7 +13,7 @@ import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [RouterModule,FormsModule,NgIf],
+  imports: [RouterModule,FormsModule,NgIf,CurrencyPipe],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })

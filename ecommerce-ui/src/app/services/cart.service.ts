@@ -9,6 +9,8 @@ export class CartService {
 
   cart: any[] = [];
 
+  payment:any = { price: 0};
+
   refresh:BehaviorSubject<number>= new BehaviorSubject(0);
 
   constructor() { 

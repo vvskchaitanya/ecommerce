@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { authGuard } from './services/auth.guard';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
+import { PaymentComponent } from './payment/payment.component';
 
 export const routes: Routes = [
     {path:"", redirectTo:"home",pathMatch:"full"},
@@ -20,6 +21,7 @@ export const routes: Routes = [
     {path:"cart", component: CartComponent},
     {path:"profile", component: ProfileComponent},
     {path:"unauthorized",component:UnauthorizedComponent},
+    {path:"payment",component:PaymentComponent},
     {path:"admin",component:DashboardComponent, canActivate:[authGuard]},
     {path:"admin/:view",component:DashboardComponent, canActivate:[authGuard]}
 ];

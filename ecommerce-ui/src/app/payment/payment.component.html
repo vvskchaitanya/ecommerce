@@ -1,0 +1,79 @@
+<div class="container mt-4">
+  <!-- Total Payable Amount -->
+  <div class="text-center mb-4">
+    <h2 class="fw-bold text-primary">Total Payable Amount</h2>
+    <h3 class="fw-bold text-success">₹{{ totalAmount }}</h3>
+  </div>
+
+  <div class="accordion" id="paymentAccordion">
+    <!-- Internet Banking Section -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingBanking">
+        <button class="accordion-button" [class.collapsed]="activeSection !== 'banking'" type="button"
+          (click)="setActiveSection('banking')" data-bs-toggle="collapse" data-bs-target="#collapseBanking">
+          Internet Banking
+        </button>
+      </h2>
+      <div id="collapseBanking" class="accordion-collapse collapse" [class.show]="activeSection === 'banking'">
+        <div class="accordion-body">
+          <label for="bankSelect" class="form-label">Select Bank</label>
+          <select id="bankSelect" class="form-select" [(ngModel)]="selectedBank">
+            <option *ngFor="let bank of banks" [value]="bank">{{ bank }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Credit/Debit Card Section -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingCard">
+        <button class="accordion-button" [class.collapsed]="activeSection !== 'card'" type="button"
+          (click)="setActiveSection('card')" data-bs-toggle="collapse" data-bs-target="#collapseCard">
+          Credit / Debit Card
+        </button>
+      </h2>
+      <div id="collapseCard" class="accordion-collapse collapse" [class.show]="activeSection === 'card'">
+        <div class="accordion-body">
+          <div class="mb-3">
+            <label class="form-label">Card Number</label>
+            <input type="text" class="form-control" placeholder="XXXX XXXX XXXX XXXX" [(ngModel)]="cardDetails.number">
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="form-label">Expiry Date</label>
+              <input type="text" class="form-control" placeholder="MM/YY" [(ngModel)]="cardDetails.expiry">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">CVV</label>
+              <input type="password" class="form-control" placeholder="XXX" [(ngModel)]="cardDetails.cvv">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPI Section -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingUPI">
+        <button class="accordion-button" [class.collapsed]="activeSection !== 'upi'" type="button"
+          (click)="setActiveSection('upi')" data-bs-toggle="collapse" data-bs-target="#collapseUPI">
+          UPI
+        </button>
+      </h2>
+      <div id="collapseUPI" class="accordion-collapse collapse" [class.show]="activeSection === 'upi'">
+        <div class="accordion-body">
+          <div class="form-check" *ngFor="let upi of upiApps">
+            <input class="form-check-input" type="radio" name="upiOptions" [value]="upi" [(ngModel)]="selectedUPI">
+            <label class="form-check-label">{{ upi }}</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="upiOptions" value="custom" [(ngModel)]="selectedUPI">
+            <label class="form-check-label">Enter UPI ID</label>
+            <input type="text" class="form-control mt-2" *ngIf="selectedUPI === 'custom'" placeholder="yourupi@bank"
+              [(ngModel)]="customUPIID">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
